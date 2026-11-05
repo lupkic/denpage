@@ -5,7 +5,7 @@ define p = Character("LION", kind=nvl, image="lion", bold = True)
 define r = Character("REX", kind=nvl, image="rex", bold = True)
 define d = Character(kind=nvl, what_prefix='"', what_suffix='"') #dialog for endings?
 define narrator = nvl_narrator
-define config.nvl_paged_rollback = True
+# define config.nvl_paged_rollback = True
 
 #TODO key "mousedown_1" action 
 
@@ -44,20 +44,32 @@ show lion neutral at lion_scr
 
 play music loopish fadein 1 volume 0.7
 p "I didnt get a chance to tell you after class but"
+
+show lion happy
+
 "Dont listen to the prof your presentation was really good!"
 "Ive been looking into the topic a little myself and what you said lines up really well with something they were debating in the 50s"
 "Its a shame people didnt take it more seriously"
 "Just because the guy who came up with it killed his wife"
+
+show lion right
+
 "Thats all anyone wants to talk about"
 
 p right "anyway"
 "I wouldve said as much in person"
+
+show lion sweat
+
 "I hope you dont think i hate you... its different face to face"
 "My fingers go numb like im about to faint"
 "Its um"
 "Not very cool I heard some people pee themselves"
 "With my luck id hit my head"
 "Bleed out with my hand raised up like im just saying hello to the linoleum"
+
+show lion right
+
 p "It wouldnt even make the papers"
 "Itd be like one of those fake articles you only see on facebook"
 "“Wretched worm breathes its last”"
@@ -78,7 +90,13 @@ p low "So hey"
 p neutral "Youre probably studying with Audrey right"
 "Itd be awkward with the three of us"
 "frankly its none of her business but i really think she doesnt like us d"
+
+show lion blush
+
 "Dating"
+
+show lion neutral
+
 "Have you read Weininger?"
 "I can send you a good summary but basically I think"
 
@@ -88,16 +106,30 @@ play sound "barking.mp3"
 "It sounds crazy but its true. Its not just women either"
 "Theyre all just a bunch of cruel looks with legs"
 "No values except for whats “nromal”"
+
+show lion sweat
+
 "Normal"
+
+show lion neutral
+
 "They dont even know theyre being used"
 "to keep people like me in line"
 
 nvl clear
 
+show lion right
+
 p "No I really dont like how she looks at you"
 "She will probably go her entire life sneering"
 "Wouldnt want to be her wedding photographer"
+
+show lion happy
+
 "Or delivering one of her 1.5 kids"
+
+show lion neutral
+
 "She doesnt even know what happiness looks like"
 "Sorry I know she is your friend and all"
 
@@ -105,36 +137,61 @@ play sound "doorbell.mp3"
 
 p "I dont even know what her problem is"
 "Am i not allowed to be happy or something?"
+
+show lion right
+
 "Of course not"
 
 play sound "doorbell.mp3"
 
 "..."
+
+show lion neutral
+
 "Hold on"
 "Someone is ringing the doorbell"
 "Theyll probably go away if i ignore it right"
+
+show lion right
 
 p "I had this dream you went away"
 "We were eating bread and talking about..."
 
 play sound "doorbell.mp3"
+show lion sweat
 
 "something"
+
+show lion neutral
+
 "And then you just went away"
 
 nvl clear
 
 p "I know youre too good for me. Its not right"
+
+show lion happy
+
 "Thats why im trying to help you too"
+
+show lion neutral
+
 "Its just not safe"
 "Shes waiting for you to slip up"
 "That viper"
+
+show lion miffed
+
 "Its true that i havent really talked to her but I dont think thats the only way to really know a person"
 "It might actually be one of the worst ways"
+
+show lion right
 
 p "I know youre just lonely. I wish i could do more about it"
 "Am i not enough?"
 "Or are you not even there?"
+
+show lion low
 
 p "Wait im getting a call"
 "Unknown number. This is seriously starting to piss me off"
@@ -143,23 +200,39 @@ play sound "television.mp3"
 
 nvl clear
 
+show lion neutral
+
 p "Lets talk about something else"
 "So yeah now its just this class"
 "My attendance was too bad to take the exam"
 "Haha you probably didnt even notice!"
 "Its hard to get myself to go when i know you wont be there..."
+
+show lion blush
+
 "You make everything so"
 "I dont know"
+
+show lion neutral
+
 "..."
 "I just get stuck in the doorway wondering what ill even do with this stupid degree"
 "The internship was a bust"
 "And now this"
 "Ill do it next year i guess"
 "At least it wasnt a total waste"
+
+show lion happy
+
 "Since I get to talk to you like this"
+
+show lion blush
 
 p "You should tell me if im being too much"
 "Thats what my first girlfriend said"
+
+show lion neutral
+
 "in kindergarten"
 
 nvl clear
@@ -170,15 +243,23 @@ p "Did i ever tell you"
 "I never even told my parents"
 "They wouldve jumped at the chance to have me gone"
 "They say its for my own good"
+
+show lion right
+
 "But i know."
 "Some days i get the sense that theres nowhere for me"
 "I cant eat anything"
 "or look people in the eye"
 "and i just go out against the weather"
 "hoping that something bad will happen thatll take it all away from me"
+
+show lion hiding
+
 "out of my hands and into a hospital room"
 "where the people with real reasons go"
 "Real human beings"
+
+show lion right
 
 p "Nothing ever happens"
 
@@ -188,6 +269,9 @@ nvl clear
 
 p "In the end..."
 "theyre just building castles in the sand"
+
+show lion neutral
+
 "Todays effort is washed away tomorrow"
 "Nobody gets to enjoy it"
 "Not those who work and not those who steal"
@@ -195,6 +279,9 @@ p "In the end..."
 play sound "prelude_l.mp3"
 
 "Its not our fault we were born too late"
+
+show lion happy
+
 "I remember now"
 "Thats what you said to me"
 "When we were eating bread in the sun"
@@ -202,43 +289,79 @@ play sound "prelude_l.mp3"
 p "Youre so cute when you complain you know"
 "You say it high and clear"
 "Like theres nobody else in the world..."
+
+show lion neutral
+
 "At first it scared me. It was so familiar"
 "I mustve written those same words hundreds of times"
 "In the margins of notebooks and on locked accounts"
 "Straight into the void"
+
+show lion right
+
 "Maybe thats naive"
 "Just because there was no answer doesnt mean no one saw"
 "You should always assume it leaves a mark somewhere"
 
 nvl clear
 
+show lion neutral
+
 p "I was taught to fear the internet just like that"
 "But it doesnt seem all that true anymore"
 "Your every movement"
 "has that gravity"
+
+show lion blush
+
 "Like youre absolutely sure those words will disappear"
 "without ever being heard"
+
+
 "but still..."
+
+show lion neutral
 
 p "Still no response huh"
 "I wish youd say something"
+
+show lion right
+
 "Just to let me know youre there"
 
 nvl clear
 
 play sound "barking2.mp3"
+show lion neutral
 
 p "I really dont think Audrey is good for you"
+
+show lion sweat
+
 "Im not saying it because im jealous. You have to believe me"
+
+show lion neutral
+
 "Sometimes i cant make sense of my own thoughts"
 "But you say them with conviction"
 "Now im terrified"
 "Whatever it is that makes you you"
+
+
 "I can tell she wants to grind it down and swallow it"
+
+show lion hiding
+
 "Thats just the kind of person she is"
 "Because she has nothing of her own"
+
+show lion happy
+
 "Maybe you pity her. Youre a good person after all"
 "But it wont end well"
+
+show lion neutral
+
 "Shes trying to take you away from me"
 "Your body will still be here"
 "But thats all"
@@ -246,6 +369,9 @@ p "I really dont think Audrey is good for you"
 p "Or are you just doing it to get back at me?"
 "Do you hate me?"
 "Because of one mistake"
+
+show lion right
+
 "One mistake..."
 
 nvl clear
@@ -256,19 +382,30 @@ p "In my dream you were asking me to run away together"
 
 $ renpy.music.set_volume(0.7, 0, 'music')
 
+show lion low
+
 p "I checked the door"
 "It was my grocery delivery"
 "Forgot i did that"
 "There is no milk... They didnt even have my second choice apparently"
 "Fuck my life"
 "Last time they did this with my shower gel"
+
+show lion sweat
+
 "I mean it was fine"
 "I dont sweat that much in the winter... i think"
+
+show lion neutral
+
 "In a way it actually saved me time"
 "But i did smell like a pickle by the end"
 "Didnt know my body could do that"
 
 p "Ive been watching the original Pretty Cure lately"
+
+show lion happy
+
 "I have no idea why i put it off"
 "Its really nice"
 "I was worried about the episode count"
@@ -281,10 +418,16 @@ p "But i think the length works for it"
 "You really get to know the characters as people"
 "Especially when i put it on while i eat"
 "It helps the house feel less empty"
+
+show lion blush
+
 "Is that a sad thing to say"
 "It just makes me think of all the little girls following it week by week back then"
 "Going to class and talking about the latest episode with the other kids"
 "Begging mom for the toys"
+
+show lion right
+
 "Mustve been fun"
 "..."
 
@@ -293,6 +436,9 @@ p "It means a lot to me that you dont judge"
 "What a freak"
 "Arent you supposed to be a guy?"
 "Stuff like that"
+
+show lion neutral
+
 "I wonder about it sometimes"
 "If anything else made me feel this way"
 "Would i do that instead?"
@@ -304,6 +450,9 @@ p "Im not trying to intrude..."
 "seeing what someone came up with"
 "trying to make others happy"
 "and thinking of what they might need"
+
+show lion right
+
 "I know its not for me..."
 
 p "Honestly"
@@ -312,8 +461,13 @@ p "Honestly"
 "I dont think being weird is a sin"
 "Other people seem pretty good at it"
 "The useful and the beautiful all get to have it"
+
+show lion happy
+
 "If i was better at living"
 "maybe id be allowed to enjoy it too"
+
+show lion low
 
 p "Oh yeah"
 "Check it out"
@@ -327,6 +481,9 @@ p "{image=bg/pigeon1_resize.png}\n"
 "I havent fed it"
 "Dont want it to get too attached and shit on my laundry"
 "But its kind of cute"
+
+show lion happy
+
 "You know some people think birds arent real"
 "They say theyre just drones spying on you for the government"
 "When you see them sit on a wire"
@@ -334,23 +491,41 @@ p "{image=bg/pigeon1_resize.png}\n"
 
 nvl clear
 
+show lion neutral
+
 p "Its actually not that out there"
 "The CIA has done it before. Then again what hasnt the CIA done"
 "Its too bad their psychic experiments never went anywhere"
 "Theres not much they can do to track guys like me"
 "I run a tight ship"
 "If you think about it that way this pigeon suddenly becomes very suspicious"
+
+show lion sweat
+
 "..."
+
+show lion neutral
+
 "Im just kidding"
 "All itd see right now is me making oatmeal anyway"
 "which is pretty much legal"
+
+show lion sweat
+
 "unless...?"
 
 nvl clear
 
+show lion neutral
+
 p "No i think it should be fine"
 "Except for this criminal lack of milk"
+
+show lion fuckass
+
 "Hehe"
+
+show lion happy
 
 p "If..."
 "If you ever came over id feed you something nice and proper"
@@ -358,14 +533,21 @@ p "If..."
 "And ill order something"
 
 stop music fadeout 1
+show lion neutral
 
 p "I just heard something click"
 "Di"
+
+show lion sweat
+
 "Did i not lock the door after i took the groceries in"
 
 play music heartbeat fadein 1 volume 0.7
 
 "I cant see it from here"
+
+show lion hiding
+
 "God im so fucking stupid i knew thisd happen someday"
 "Its not like i know my neighbors that well"
 "It would be too easy"
@@ -393,6 +575,7 @@ p "It doesnt make any sense"
 "cant get up from the floor"
 
 stop music fadeout 1
+show lion hand
 
 p "Sorry"
 "Thank god you didnt call the cops"
@@ -401,6 +584,7 @@ p "Sorry"
 
 nvl clear
 play music loopish fadein 1 volume 0.7
+show lion low
 
 p "The noise is gone"
 "Ill just eat my oatmeal"
@@ -408,6 +592,8 @@ p "The noise is gone"
 p "Do you think the prof would mind if i didnt turn in anything"
 "I dont really"
 "feel up to it right now"
+
+show lion right
 
 p "I put in strawberry jam this time"
 "Looks kind of gross"
@@ -418,21 +604,30 @@ p "I put in strawberry jam this time"
 
 nvl clear
 
+show lion neutral
+
 p "Hey"
 "So"
 "Did you get home okay after that"
 
 y "after what"
 
+show lion sweat
+
 p "Oh"
 "There you are"
 "..."
 "Actually nevermind"
 
+show lion neutral
+
 p "I forgot to put on my episode"
 "Might be for the best i think itd go over my head right now"
 "But um"
 "I like your company too"
+
+show lion right
+
 "It just gets quiet here"
 "Wasnt as bad when grandma was still around"
 
@@ -447,9 +642,12 @@ p "I dont know. She was a nag"
 "But at least"
 "We could act like a family"
 
+show lion hiding
+
 p "A family..."
 
 play sound "prelude_r.mp3"
+show lion neutral
 
 p "Iris"
 "How come"
@@ -458,8 +656,14 @@ p "Iris"
 "I cant join everyone in that sunny spot"
 "so why"
 "when i finally find something"
+
+show lion low
+
 "why is it wrong?"
 "Why is it creepy only when i do it?"
+
+show lion hiding
+
 "They should be grateful"
 "All those things they forgot about"
 "Their toys and cartoons and grandma too"
@@ -483,6 +687,8 @@ label pviolence1:
 
     y "there's nothing wrong with you, lion"
     
+    show lion blush
+
     p "H"
     "haha"
     "Nothing"
@@ -491,10 +697,18 @@ label pviolence1:
     "you keep saying these cruel things"
     "like you forgot i love you"
     
+    show lion hand
+
     p "imsorryimsorryimsorryimsorry"
     "I mean"
+
+    show lion blush
+
     "I love you too"
     "..."
+
+    show lion happy
+
     "Youre the only person in the world who would say that"
     "Knwoing me"
     "Knowing"
@@ -504,6 +718,8 @@ label pviolence1:
     y "but those people you always talk about"
     "they don't really know you, do they?"
     
+    show lion right
+
     p "No"
 
     y "see"
@@ -515,10 +731,17 @@ label pviolence1:
     "they have no control over your mind"
     "or your heart"
     
+    show lion sweat
+
     p "That"
+
+    show lion hiding
+
     "might be true"
     "But..."
     
+    show lion hiding
+
     "\n(VIOLENCE +1)"
     $ violence+=1
     jump pcont1
@@ -531,6 +754,8 @@ label pdespair1:
     y "lion"
     "why do you like me"
     
+    show lion sweat
+
     p "???"
     
     y "you say you're not a real person like everybody else"
@@ -544,6 +769,8 @@ label pdespair1:
     
     nvl clear
     
+    show lion hand
+
     p "Oh god i"
     "When i said that i didnt mean it like"
     "Sorry"
@@ -552,11 +779,15 @@ label pdespair1:
     "it’s okay"
     "i’m listening"
     
+    show lion right
+
     p "I really do think"
     "youre like an angel sometimes"
     "When i say youre not like them"
     "Thats what im trying to"
     
+    show lion blush
+
     p "Ugh"
 
     y "that’s so sweet <3"
@@ -571,17 +802,28 @@ label pcont1:
 
 nvl clear
 
+show lion sweat
+
 p "I thought you were mad at me"
 "I mean"
 "Isnt that how this goes"
 
 y "why should i be"
 
+show lion neutral
+
 p "Because I saw"
 "When you"
+
+show lion right
+
 "..."
 
+
 p "When Audrey"
+
+show lion hiding
+
 "That bitch laid a hand on you i cant believe she did that still i mean it couldnt have possibly been that important she never talks about ANYTHING important so why did she have to"
 "Shove you like that"
 "I was so angry i thought i would throw up"
@@ -595,12 +837,16 @@ p "She didnt even look back to see you go down"
 "She just didnt want to"
 "“MAKE A SCENE”"
 
+show lion neutral
+
 p "But I saw them all"
 "Everyone walking by"
 "Pretending to stare at the sky"
 "Or their fucking shoes"
 "Like the problem that will go away on its own"
 "Is “you”"
+
+show lion right
 
 p "I cant stand it"
 "I really cant..."
@@ -623,6 +869,8 @@ label pviolence2:
     "i’m really sorry"
     "you kept trying to warn me..."
     
+    show lion happy
+
     p "Its ok"
     "You dont know her like i do"
     "I just wish none of this ever happened"
@@ -633,9 +881,15 @@ label pviolence2:
     
     p "She just wants to ruin my life"
     "I cant think of any other reason"
+
+    show lion neutral
+
     "Audrey"
     "always on her way up"
     "with her elbow in your back and her foot in your mouth"
+
+    show lion right
+
     "Like shes any better..."
 
     nvl clear
@@ -657,6 +911,9 @@ label pdespair2:
     nvl clear
 
     y "sometimes"
+
+    show lion neutral
+
     "i wish they'd all just die"
     "all these people who think tomorrow will come no matter what"
     "even when they don't deserve it"
@@ -675,6 +932,9 @@ label pdespair2:
     "But i dont think these people are living in the real world either"
     "Thinking about being late for work"
     "While someone collapses right beside them"
+
+    show lion hiding
+
     "Its sick"
 
     nvl clear
@@ -696,17 +956,27 @@ label pcont2:
 
 nvl clear
 
+show lion neutral
+
 p "Dont worry"
 "Ill show her consequences"
 "Im gonna make Audrey apologize"
 "For everything"
 
+show lion hand
+
 p "I dont like feeling angry"
 "That boiling sensation"
 "It drags me right back in my body"
 "But"
+
+show lion neutral
+
 "Its the least i could do"
 "Ill make her say it over and over and over"
+
+show lion happy
+
 "and over again"
 "Until i can finally forgive her"
 "And then..."
@@ -720,6 +990,9 @@ nvl clear
 
 p "Its fine"
 "Ill write to her"
+
+show lion neutral
+
 "Theres no telling what she might do after all"
 "When shown the truth"
 
@@ -729,6 +1002,8 @@ p "Ok i sent it"
 
 y "are you sure she’s gonna read it"
 
+show lion happy
+
 p "I led with a threat so it should be fine!"
 "But wow"
 "That felt pretty good"
@@ -736,6 +1011,8 @@ p "I led with a threat so it should be fine!"
 "I gave her a piece of my mind..."
 
 nvl clear
+
+show lion right
 
 p "I always thought"
 "it takes a special sort of person to make a change"
@@ -745,6 +1022,9 @@ p "I always thought"
 "Theres no point in just saying “no”"
 "Until you know what it is you want more than anything"
 "theyll keep on walking all over you"
+
+show lion neutral
+
 "but now i see"
 "I shouldve done this a long time ago"
 
@@ -754,6 +1034,9 @@ y "i think even a no has meaning"
 
 p "Youre right"
 "Im so stupid"
+
+show lion happy
+
 "How did i not see it before"
 "I gave up too early"
 "When there still was something i could do"
@@ -766,6 +1049,8 @@ p "Haha"
 "Too bad i never learned how to do it"
 
 y "and you have an inbox to watch!"
+
+show lion low
 
 p "Oh yeah"
 "The apology"
@@ -783,9 +1068,14 @@ p "{image=bg/pigeon2_resize.png}"
 
 y "thats us"
 
+show lion fuckass
+
 p "Hehe. Yeah"
 "They look so warm there in the sun"
 "I think ill step out a little after all"
+
+show lion happy
+
 "I have my phone with me"
 "So i should see if she replies anyway"
 
@@ -1028,10 +1318,14 @@ r "but thats neither here nor there"
 "wont know unless i try"
 
 stop music fadeout 1.5
+show rex neutral at lion_scr
 
 r "{i}“Something dark and vital red squirmed in his stomach. The man he loved, in all his frail beauty, was waiting with open arms. His limbs became paralyzed with certainty. If Haku laid a hand on him now, he would crumble. All with that same smile on his face...”{/i}"
 
 r "so"
+
+show rex thinking
+
 "youre basically a genius right"
 "why would a girl not wear the bracelet i got for her"
 
@@ -1040,17 +1334,27 @@ play music loopish fadein 1 volume 0.7
 "i tried to match her style"
 "nothing outrageous but better than what she usually wears"
 "with those infantile plastic beads..."
+
+show rex neutral
+
 "couldnt catch me dead in something like that i have an image to consider but her"
 "its like shes totally given up"
+
+
 "i mean she talked to ME about fandom discourse"
 "can you fucking imagine. we are NOT that close"
 
 play sound "street2.mp3"
 
 "thats like showing your bare ass to a houseguest"
+
+show rex mocking
+
 "of your parents"
 
 nvl clear
+
+show rex neutral
 
 r "the whole thing made my skin crawl"
 "had to pretend i had no idea what she was talking about"
@@ -1066,17 +1370,26 @@ r "theres this guy in one of our classes"
 "always the first out the door once the lectures over"
 "total prey animal"
 "i get secondhand nausea just from looking at him"
+
+show rex frustrated
+
 "wouldnt be a problem if he wasnt staring at us constantly"
 "at least i think he is? dude needs a haircut"
 "see if it was a guy like that i wouldnt wanna wear it either"
+
+show rex thinking
+
 "but its me"
 "you know?"
 
 nvl clear
 
+show rex neutral
+
 y "{i}“How many times had they done this already? He saw no reason for Haku to hesitate. He cocked his head, making another gesture of invitation. Their earlier brush with death only made him more desperate; his body strained to lift itself to meet him.”{/i}"
 
 play sound "typing.mp3"
+show rex bored
 
 r "can you take this seriously please"
 "of course he knows haku wants him to be safe"
@@ -1087,9 +1400,14 @@ r "can you take this seriously please"
 "im not asking for much"
 "just some basic fucking literacy"
 
+show rex neutral
+
 r "i almost forgot. like right this is why i work alone"
 "even when you think youre on the same page as someone else"
 "it turns out theyve been talking out of their ass the whole time"
+
+show rex eyebrow twitch
+
 "imagining a circle while you describe the moon"
 "and then all of a sudden IM the bitch for wanting more"
 
