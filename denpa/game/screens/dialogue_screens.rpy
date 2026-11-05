@@ -129,10 +129,14 @@ style quick_button_text: #colors for back history etc
 ## https://www.renpy.org/doc/html/screen_special.html#nvl
 
 
+
 screen nvl(dialogue, items=None):
 
     window:
-        style "nvl_window"
+        if nvl_mode == "ed":
+            style "ed_window"
+        else:
+            style "nvl_window"
 
         has vbox
         spacing 0
@@ -171,7 +175,15 @@ screen nvl_dialogue(dialogue):
 
 ## This controls the maximum number of NVL-mode entries that can be displayed at
 ## once.
-define config.nvl_list_length = 20
+define config.nvl_list_length = 15
+
+style ed_window:
+    is default
+    xfill True yfill True
+    background "gui/nvl2.png"
+    padding (0, 0, 0, 15)
+
+
 
 # The style for the NVL "textbox"
 style nvl_window:
@@ -199,7 +211,7 @@ style nvl_dialogue:
 
 # The style for dialogue said by the narrator in NVL
 style nvl_thought:
-    xpos 170
+    xpos gui.xpadding
     ypos -10 yanchor -5
     xsize 700
     min_width 100

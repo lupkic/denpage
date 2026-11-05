@@ -1,4 +1,4 @@
-﻿# characters TODO add color
+# characters TODO add color
 
 define y = Character("IRIS", kind=nvl, bold = True)
 define p = Character("LION", kind=nvl, image="lion", bold = True)
@@ -26,6 +26,7 @@ label start:
 
     $ violence = 0
     $ despair = 0
+    $ nvl_mode = 0
 
     scene bg1
 
@@ -1083,6 +1084,12 @@ nvl clear
 stop music fadeout 1
 
 "violence = [violence]\n despair = [despair]"
+
+nvl clear
+scene bg14
+$ nvl_mode = "ed"
+$ gui.xanchor = 400
+$ gui.rebuild()
 
 if violence==2:
     jump pv
