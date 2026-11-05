@@ -10,87 +10,90 @@ screen preferences():
 
     tag menu
 
-    add HBox(Transform("#292835", xsize=350), "#21212db2") # The background; can be whatever
-
-    use game_menu(_("Preferences"))
+    add "#000"
+    add HBox(Solid("#000", xsize=325),"images/quickbar horizontal.png") # The background; can be whatever
+    
+    use game_menu(_("Options"))
 
     viewport:
         style_prefix 'game_menu'
         mousewheel True draggable True pagekeys True
         scrollbars "vertical"
         has vbox
-
+        null height 50
         hbox:
-            box_wrap True
+            vbox:
+                box_wrap True
 
-            if renpy.variant("pc") or renpy.variant("web"):
-                # Only need fullscreen/windowed on desktop and web builds
+                if renpy.variant("pc") or renpy.variant("web"):
+                    # Only need fullscreen/windowed on desktop and web builds
+
+                    vbox:
+                        style_prefix "radio"
+                        label _("Display")
+                        textbutton _("Window"):
+                            # Ensures this button is selected when
+                            # not in fullscreen.
+                            selected not preferences.fullscreen
+                            action Preference("display", "window")
+                        textbutton _("Fullscreen"):
+                            action Preference("display", "fullscreen")
 
                 vbox:
-                    style_prefix "radio"
-                    label _("Display")
-                    textbutton _("Window"):
-                        # Ensures this button is selected when
-                        # not in fullscreen.
-                        selected not preferences.fullscreen
-                        action Preference("display", "window")
-                    textbutton _("Fullscreen"):
-                        action Preference("display", "fullscreen")
-
-            vbox:
-                style_prefix "check"
-                label _("Skip")
-                textbutton _("Unseen Text"):
-                    action Preference("skip", "toggle")
-                textbutton _("After Choices"):
-                    action Preference("after choices", "toggle")
-                textbutton _("Transitions"):
-                    action InvertSelected(Preference("transitions", "toggle"))
+                    style_prefix "check"
+                    label _("Skip")
+                    textbutton _("Unseen Text"):
+                        action Preference("skip", "toggle")
+                    textbutton _("After Choices"):
+                        action Preference("after choices", "toggle")
+                    textbutton _("Transitions"):
+                        action InvertSelected(Preference("transitions", "toggle"))
 
             ## Additional vboxes of type "radio_pref" or "check_pref" can be
             ## added here, to add additional creator-defined preferences.
 
-        null height 60
+            null height 30
+            null width 30
 
-        hbox:
-            style_prefix "slider"
-            box_wrap True
+            hbox:
+                style_prefix "slider"
+                box_wrap True
 
-            vbox:
+                vbox:
 
-                label _("Text Speed")
-                bar value Preference("text speed")
+                    label _("Text Speed")
+                    bar value Preference("text speed")
 
-                label _("Auto-Forward Time")
-                bar value Preference("auto-forward time")
+                    label _("Auto-Forward Time")
+                    bar value Preference("auto-forward time")
 
-            vbox:
+                vbox:
 
-                if config.has_music:
-                    label _("Music Volume")
-                    hbox:
-                        bar value Preference("music volume")
+                    if config.has_music:
+                        label _("Music Volume")
+                        hbox:
+                            bar value Preference("music volume")
 
-                if config.has_sound:
-                    label _("Sound Volume")
-                    hbox:
-                        bar value Preference("sound volume")
-                        if config.sample_sound:
-                            textbutton _("Test") action Play("sound", config.sample_sound)
+                    if config.has_sound:
+                        label _("Sound Volume")
+                        hbox:
+                            bar value Preference("sound volume")
+                            if config.sample_sound:
+                                textbutton _("Test") action Play("sound", config.sample_sound)
 
 
-                if config.has_voice:
-                    label _("Voice Volume")
-                    hbox:
-                        bar value Preference("voice volume")
-                        if config.sample_voice:
-                            textbutton _("Test") action Play("voice", config.sample_voice)
+                    if config.has_voice:
+                        label _("Voice Volume")
+                        hbox:
+                            bar value Preference("voice volume")
+                            if config.sample_voice:
+                                textbutton _("Test") action Play("voice", config.sample_voice)
 
-                if config.has_music or config.has_sound or config.has_voice:
-                    null height 15
-                    textbutton _("Mute All"):
-                        style_prefix "check"
-                        action Preference("all mute", "toggle")
+                    if config.has_music or config.has_sound or config.has_voice:
+                        null height 15
+                        textbutton _("Mute All"):
+                            style_prefix "check"
+                            action Preference("all mute", "toggle")
 
 ### PREF
 style pref_label:
@@ -101,7 +104,7 @@ style pref_label_text:
     yalign 1.0
 
 style pref_vbox:
-    xsize 338
+    xsize 238
 
 ## RADIO
 style radio_label:

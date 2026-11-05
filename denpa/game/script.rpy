@@ -1,4 +1,4 @@
-# characters TODO add color
+﻿# characters TODO add color
 
 define y = Character("IRIS", kind=nvl, bold = True)
 define p = Character("LION", kind=nvl, image="lion", bold = True)
@@ -8,6 +8,7 @@ define narrator = nvl_narrator
 # define config.nvl_paged_rollback = True
 
 #TODO key "mousedown_1" action 
+#TODO make choice menu work correctly
 
 style nvl_dialogue:
     outlines [ (5, "#000", absolute(0), absolute(0)) ]
@@ -19,7 +20,8 @@ transform lion_scr: #position for pygs image
 
 transform rex_scr: #position for rexs image TODO check
     xalign 0.05
-    yalign 0.3
+    yalign 0.7
+    
 # The game starts here.
 
 label start:
@@ -39,6 +41,8 @@ label start:
 return
 
 label chat_pyg:
+
+$nvl_mode = "pyg" #this does nothing bc pyg is default but its good to make him feel included
 
 scene bg2 at right #TODO figure out nvl fade effect
 show lion neutral at lion_scr
@@ -1274,6 +1278,8 @@ label chat_rex:
 
 #"Case.2"
 
+$nvl_mode = "rex"
+
 r "ok lets take it from the top"
 
 play music street fadein 1
@@ -1323,7 +1329,7 @@ r "but thats neither here nor there"
 "wont know unless i try"
 
 stop music fadeout 1.5
-show rex neutral at lion_scr
+show rex neutral at rex_scr
 
 r "{i}“Something dark and vital red squirmed in his stomach. The man he loved, in all his frail beauty, was waiting with open arms. His limbs became paralyzed with certainty. If Haku laid a hand on him now, he would crumble. All with that same smile on his face...”{/i}"
 
@@ -2246,6 +2252,10 @@ show rex thinking
 
 "violence = [violence]\n despair = [despair]"
 
+$ nvl_mode = "ed"
+$ gui.xanchor = 400
+$ gui.rebuild()
+
 if violence>=2:
     jump rv
 
@@ -2262,6 +2272,7 @@ return
 label rv:
 
 nvl clear
+
 
 "2V: old friend"
 

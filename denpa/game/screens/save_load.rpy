@@ -17,7 +17,8 @@ screen save():
 
     tag menu
 
-    add HBox(Solid("#000", xsize=325),"images/quickbar horizontal.png", ysize=150) # The background; can be whatever
+    add "#000"
+    add HBox(Solid("#000", xsize=325),"images/quickbar horizontal.png") # The background; can be whatever
 
     use file_slots(_("Save"))
 
@@ -26,7 +27,7 @@ screen load():
 
     tag menu
 
-    add HBox(Solid("#000", xsize=325),"images/quickbar horizontal.png", ysize=150) # The background; can be whatever
+    add HBox(Solid("#000", xsize=325),"images/quickbar horizontal.png") # The background; can be whatever
 
     use file_slots(_("Load"))
 
@@ -34,7 +35,7 @@ screen load():
 screen file_slots(title):
 
     default page_name_value = FilePageNameInputValue(
-        pattern=_("Page {}"), auto=_("Automatic saves"),
+        pattern=_("Page {}"), auto=_("Auto saves"),
         quick=_("Quick saves"))
 
     use game_menu(title)

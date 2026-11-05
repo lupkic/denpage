@@ -2,9 +2,6 @@
 ## Initialization
 ################################################################################
 
-#TODO flipped ui for rex
-#TODO ed ui (standard) 4:3?
-
 ## The init offset statement causes the initialization statements in this file
 ## to run before init statements in any other file.
 init offset = -2
@@ -99,12 +96,12 @@ style label_text:
 
 
 style bar:
-    ysize 38
+    ysize 20
     left_bar Frame("gui/bar/left.png", 6, 6, 6, 6, tile=False)
     right_bar Frame("gui/bar/right.png", 6, 6, 6, 6, tile=False)
 
 style vbar:
-    xsize 38
+    xsize 20
     top_bar Frame("gui/bar/top.png", 6, 6, 6, 6, tile=False)
     bottom_bar Frame("gui/bar/bottom.png", 6, 6, 6, 6, tile=False)
 
@@ -121,12 +118,12 @@ style vscrollbar:
     unscrollable 'hide'
 
 style slider:
-    ysize 38
+    ysize 20
     base_bar Frame("gui/slider/horizontal_[prefix_]bar.png", 6, 6, 6, 6, tile=False)
     thumb "gui/slider/horizontal_[prefix_]thumb.png"
 
 style vslider:
-    xsize 38
+    xsize 20
     base_bar Frame("gui/slider/vertical_[prefix_]bar.png", 6, 6, 6, 6, tile=False)
     thumb "gui/slider/vertical_[prefix_]thumb.png"
 

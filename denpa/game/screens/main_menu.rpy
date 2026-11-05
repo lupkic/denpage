@@ -26,11 +26,11 @@ screen main_menu():
         yoffset 40
         spacing 35
 
-        textbutton _("START") action Start()
+        textbutton _("PLAY") action Start()
 
         textbutton _("LOAD") action ShowMenu("load")
 
-        textbutton _("PREFERENCES") action ShowMenu("preferences")
+        textbutton _("OPTIONS") action ShowMenu("preferences")
 
         textbutton _("ABOUT") action ShowMenu("about")
 

@@ -16,7 +16,7 @@ screen game_menu(title):
     hbox:
         xalign 0.5
         yoffset 40
-        spacing 35
+        spacing 20
 
         if main_menu:
 
@@ -24,13 +24,13 @@ screen game_menu(title):
 
         else:
 
-            textbutton _("History") action ShowMenu("history")
+#            textbutton _("History") action ShowMenu("history")
 
             textbutton _("Save") action ShowMenu("save")
 
         textbutton _("Load") action ShowMenu("load")
 
-        textbutton _("Preferences") action ShowMenu("preferences")
+        textbutton _("Options") action ShowMenu("preferences")
 
         if _in_replay:
 
@@ -38,14 +38,16 @@ screen game_menu(title):
 
         elif not main_menu:
 
-            textbutton _("Main Menu") action MainMenu()
+            textbutton _("Title") action MainMenu()
 
-        textbutton _("About") action ShowMenu("about")
+#        textbutton _("About") action ShowMenu("about")
 
-        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+        textbutton _("Back") action Return()
+
+#        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Help") action ShowMenu("help")
+#            textbutton _("Help") action ShowMenu("help")
 
         if renpy.variant("pc"):
 
@@ -53,9 +55,9 @@ screen game_menu(title):
             ## unnecessary on Android and Web.
             textbutton _("Quit") action Quit(confirm=not main_menu)
 
-    textbutton _("Return"):
-        style "return_button"
-        action Return()
+#    textbutton _("Return"):
+#        style "return_button"
+#        action Return()
 
     ## Remove this line if you don't want to show the screen
     ## title text as a label (for example, if it's baked into
@@ -65,9 +67,9 @@ screen game_menu(title):
     if main_menu:
         key "game_menu" action ShowMenu("main_menu")
 
-style return_button: #TODO place somewhere normal
-    xalign 0.5
-    yoffset 70
+#style return_button: #TODO place somewhere normal
+#    xalign 0.5
+#    yoffset 70
 
 style game_menu_viewport:
     xsize config.screen_width-420

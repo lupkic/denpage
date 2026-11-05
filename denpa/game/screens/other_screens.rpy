@@ -18,7 +18,8 @@ screen about():
 
     tag menu
 
-    add "#21212db2" # The background; can be whatever
+    add "#000" # The background; can be whatever
+    add HBox(Solid("#000", xsize=325),"images/quickbar horizontal.png")
 
     use game_menu(_("About"))
 
@@ -55,7 +56,8 @@ screen help():
 
     default device = "keyboard"
 
-    add HBox(Transform("#292835", xsize=350), "#21212db2") # The background; can be whatever
+    add "#000" # The background; can be whatever
+    add HBox(Solid("#000", xsize=325),"images/quickbar horizontal.png")
 
     use game_menu(_("Help"))
 
@@ -67,6 +69,8 @@ screen help():
         has vbox
         style_prefix "help"
         spacing 23
+
+        null height 10
 
         hbox:
 
@@ -192,7 +196,6 @@ style help_button:
     xmargin 12
 
 style help_label:
-    xsize 375
     right_padding 30
 
 style help_label_text:

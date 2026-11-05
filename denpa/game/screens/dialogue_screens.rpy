@@ -77,23 +77,32 @@ transform qbar: #position of quickbar
     xalign 0.01
     yoffset 50
 
+transform rexbar: #position of quickbar FOR REX (SPECIAL AND UNIQUE)
+    xalign 0.99
+    yoffset 50
+
 screen quick_menu():
 
     ## Ensure this appears on top of other screens.
     zorder 100
 
     if quick_menu:
-        image 'quickbar.png' at qbar
+        if nvl_mode == "rex":
+            image 'quickbar.png' at rexbar
+        else:
+            image 'quickbar.png' at qbar
         vbox:
-            
-            style_prefix "quick"
+            if nvl_mode == "rex":
+                style_prefix "rex"
+            else:
+                style_prefix "quick"
 
             textbutton _("Back") action Rollback()
-            textbutton _("History") action ShowMenu('history')
+            textbutton _("Log") action ShowMenu('history')
             textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
             textbutton _("Auto") action Preference("auto-forward", "toggle")
             textbutton _("Save") action ShowMenu('save')
-            textbutton _("Prefs") action ShowMenu('preferences')
+            textbutton _("Option") action ShowMenu('preferences')
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
@@ -109,7 +118,7 @@ style quick_vbox: #quickmenu box
     spacing 40
 
 style rex_vbox:
-    xalign 0.985 
+    xalign 0.980 
     yalign 0.50
     spacing 40
 
@@ -135,6 +144,8 @@ screen nvl(dialogue, items=None):
     window:
         if nvl_mode == "ed":
             style "ed_window"
+        elif nvl_mode == "rex":
+            style "rex_window"
         else:
             style "nvl_window"
 
@@ -167,9 +178,16 @@ screen nvl_dialogue(dialogue):
                 if d.who is not None:
 
                     text d.who:
+                        if nvl_mode == "rex": #special rex position for special rex
+                            xpos 410
                         id d.who_id
 
                 text d.what:
+                    if nvl_mode == "ed": #position for ending nvl segment
+                        xpos 240
+                        xsize 800
+                    elif nvl_mode == "rex":
+                        xpos 410
                     id d.what_id
 
 
@@ -181,6 +199,12 @@ style ed_window:
     is default
     xfill True yfill True
     background "gui/nvl2.png"
+    padding (0, 0, 0, 15)
+
+style rex_window:
+    is default
+    xfill True yfill True
+    background "gui/nvlrex.png"
     padding (0, 0, 0, 15)
 
 
@@ -211,7 +235,7 @@ style nvl_dialogue:
 
 # The style for dialogue said by the narrator in NVL
 style nvl_thought:
-    xpos gui.xpadding
+    xpos 170
     ypos -10 yanchor -5
     xsize 700
     min_width 100
