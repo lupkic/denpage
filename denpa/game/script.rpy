@@ -479,8 +479,7 @@ nvl clear
 
 p "{image=bg/pigeon1_resize.png}\n"
 "This guys been coming to my balcony for a few days now"
-"I havent fed it"
-"Dont want it to get too attached and shit on my laundry"
+"I havent fed it. Dont want it to get too attached and shit on my laundry"
 "But its kind of cute"
 
 show lion happy
@@ -501,11 +500,10 @@ p "Its actually not that out there"
 "I run a tight ship"
 "If you think about it that way this pigeon suddenly becomes very suspicious"
 
-show lion sweat
 
 "..."
 
-show lion neutral
+show lion happy
 
 "Im just kidding"
 "All itd see right now is me making oatmeal anyway"
@@ -1347,6 +1345,7 @@ show rex neutral
 "couldnt catch me dead in something like that i have an image to consider but her"
 "its like shes totally given up"
 
+show rex judging
 
 "i mean she talked to ME about fandom discourse"
 "can you fucking imagine. we are NOT that close"
@@ -1378,7 +1377,7 @@ r "theres this guy in one of our classes"
 "total prey animal"
 "i get secondhand nausea just from looking at him"
 
-show rex frustrated
+show rex judging
 
 "wouldnt be a problem if he wasnt staring at us constantly"
 "at least i think he is? dude needs a haircut"
@@ -1420,6 +1419,8 @@ show rex eyebrow twitch
 
 nvl clear
 
+show rex neutral
+
 r "but well"
 "if i am to have any nerdy friends"
 "i have to make allowances"
@@ -1432,6 +1433,9 @@ r "its fine"
 r "{i}“He let Jiro draw him in, nuzzled against his collarbone. Their skin stuck together, cold and damp as if they were waking from a nightmare. There was an impatience in his manner he’d never seen before. He licked along a jutting shoulder – no reaction.”{/i}"
 
 r "she said shes done it before but"
+
+show rex thinking
+
 "this might be a bit much for her huh"
 "its different when you have to look your rp partner in the eye afterwards lol"
 "i dont want any more incidents"
@@ -1440,23 +1444,35 @@ r "she said shes done it before but"
 
 nvl clear
 
+show rex mocking
+
 r "aye aye capn i am dating chie satonaka in real life"
 "she just goes to a different school"
 "and already has a girlfriend"
 
+show rex eyebrow twitch
+
 r "baby steps"
 "its not like im looking for a soulmate"
+
+show rex thinking
 
 r "its kinda funny"
 "theres girls in my course who are married already"
 "like"
 "you cant string two coherent sentences together"
 "how are you making decisions about your FUTURE"
+
+show rex neutral
+
 "expecting someone to understand you and put you first for the rest of their life"
 "is just setting yourself up for disappointment"
 "i dont think im unique or special"
 "my depths are pretty fathomable"
 "its just..."
+
+show rex judging
+
 "not realistic?"
 
 nvl clear
@@ -1464,10 +1480,16 @@ nvl clear
 r "it doesnt matter how hard you try to get yourself across to someone"
 "the moment its in their hands"
 "its over"
+
+show rex frustrated
+
 "the more you struggle the more sure they will be of their own dumb bullshit"
 "well i doth protest"
 "or i didst"
 "such as in the case of the satonaka"
+
+show rex neutral
+
 "only there was no point"
 "take it from me"
 "you dont need that large language nonsense"
@@ -1488,6 +1510,9 @@ r "you cant help it if people have an image of you"
 y "{i}“Jiro=unhappy?”{/i}"
 
 r "are you an idiot like, habitually"
+
+show rex judging
+
 "or just because this is the free plan?"
 "go do that somewhere else"
 "if you dont like that ive been halfway puppeting your guy too"
@@ -1497,16 +1522,27 @@ r "are you an idiot like, habitually"
 
 y "How about a story where we kill eachother"
 
+show rex mocking
+
 r "now youre speaking my LANGUAGE"
 
 nvl clear
 
+
 r "i mean it follows from what we were doing so fair play i guess"
+
+show rex thinking
+
 "hmm but jiro doesnt really strike me as the active type"
 "its more like he attracts a certain sort"
 "the kinda people who dont respect him or care whats gonna happen to him once theyre done"
 "i guess it could be an honest mistake"
+
+
 "maybe he thinks everyone would be glad to receive pain like himself"
+
+show rex neutral
+
 "well"
 "i am happy to entertain your take on things"
 
@@ -1514,6 +1550,9 @@ y "That's it, Audrey"
 
 r "oh wow"
 "you can leave the literature nobel at the door"
+
+show rex frustrated
+
 "also, barf"
 
 play sound "street2.mp3"
@@ -1521,6 +1560,9 @@ play sound "street2.mp3"
 "shouldve told you to call me by my username"
 "i know its supposed to help me get used to this whole “being known” ordeal"
 "but that felt like a bed of nails genuinely"
+
+show rex neutral
+
 "lets go with rex for now"
 "and maybe we can work our way up to it or something"
 "ok go on"
@@ -1532,12 +1574,19 @@ y "{i}“The hunting knife gleamed once in the low light. That was the only warn
 r "ok stop"
 
 play sound "typing.mp3"
+show rex mocking
 
 "where did he pull that knife from, his ass???"
 "you need to establish this stuff properly"
 "last i checked he was half undressed and pinned under my freak"
+
+show rex neutral
+
 "thats strike two"
 "i seriously dont get why they asked me to waive my human rights so you can remember more details if it was going to be like this"
+
+show rex judging
+
 "does the g in gpt stand for goldfish?????"
 "i just cracked a nail typing that out. oops"
 
@@ -1549,11 +1598,14 @@ r "buddy"
 stop music fadeout 1
 nvl clear
 
+show rex bored
+
 r "alright fine ill humor you a little"
 "but im moving that wound to the upper arm"
 "seeing as thats the only thing he could feasibly reach from this position"
 
 play music rhapsody fadein 1.5
+show rex neutral
 
 r "{i}“Sparks flew inside his vision. He grunted, shifting his weight so as to hold the brunt of it with his other side. He could feel himself press the breath out of Jiro’s body.{/i} Cut it out, {i}he hissed, half-speaking to himself. Punishing him would be giving him exactly what he wanted.”{/i}"
 
@@ -1569,6 +1621,8 @@ r "hm"
 "feels like its missing something"
 "to be fair youre not giving me much to work with"
 
+show rex bored
+
 r "maybe its just diminishing returns"
 "at my ripe old age"
 "ive seen it all"
@@ -1576,12 +1630,17 @@ r "maybe its just diminishing returns"
 "in every configuration"
 "in my minds eye its baroque"
 "practically leaping off the page"
+
+show rex neutral
+
 "like that one statue of the guy being killed by snakes or whatever"
 "but this..."
 
 nvl clear
 
 y "Do you mean Laocoon?"
+
+show rex mocking
 
 r "right thats the one"
 "ive always liked his ribs"
@@ -1590,11 +1649,18 @@ r "right thats the one"
 "frozen in the moment"
 "nothing coming in or out"
 
+show rex neutral
+
 r "i guess i thought i would be over this shit by now"
 "and in a sense i kinda am"
+
+show rex judging
+
 "like you couldnt threaten me with a gun to watch what passes for seasonal anime these days"
 "but that leaves only so many things to talk about"
 "youd think she was born yesterday"
+
+show rex neutral
 
 r "its like"
 "theres something i cant purge"
@@ -1603,10 +1669,13 @@ r "its like"
 
 nvl clear
 
+
 r "the moment i put it into words it turns shallow and juvenile"
 "and i cant believe im circling it again"
 "the same ideas"
 "expressed through a series of identically beautiful young men"
+
+show rex thinking
 
 r "if i chose the spinoff characters to rp"
 "its only because nobody cares what i do with them"
@@ -1618,6 +1687,9 @@ r "if i chose the spinoff characters to rp"
 "you have to give them meaning yourself"
 "and force them into being"
 "properly this time"
+
+show rex neutral
+
 "i just dont get the same satisfaction from original work"
 "the best you can do in terms of before and after"
 "is parade around an even more embarrassing version of yourself"
@@ -1630,16 +1702,25 @@ r "basically"
 "so there should be no problem"
 
 r "but yeah the way i see it is"
+
+show rex thinking
+
 "theyre hurting eachother with purpose"
 "not out of hate or anger"
 "and definitely not because of some mistake"
 "theyre just the happiest when theyre together"
 "even if that means bleeding out in the back of an alley"
 "like"
+
+show rex judging
+
 "they only make sense as a unit to begin with"
 "and i dont think jiro will ever stop wanting to die"
 "i mean once you start thinking about that stuff..."
 "it seems like the obvious solution"
+
+show rex neutral
+
 "so why not give them a happy ending on their own terms"
 
 r "{i}“He continued to lay kisses on him, from neck, to cheek, to forehead. Jiro’s breaths came shallow beneath him. His heart sank when he caught sight of his expression: vague and distant, like he was just waiting for an ache to pass. Strength drained out of him. He rolled over to his side, bleeding arm blanketed over the other man.”{/i}"
@@ -1647,6 +1728,9 @@ r "{i}“He continued to lay kisses on him, from neck, to cheek, to forehead. Ji
 nvl clear
 
 r "except"
+
+show rex frustrated
+
 "i just cant"
 
 y "{i}“He rubbed small, reassuring circles into his back.{/i} See, you’re doing it again, {i}he whispered hoarsely.{/i} I don’t want you to have to keep worrying about me. {i}Without Haku’s weight pinning him in place, he felt he was floating up, up through the ceiling and into the night sky.”{/i}"
@@ -1659,6 +1743,8 @@ r "i cant imagine him being convinced"
 
 r "“The hell do you want me to do...? {i}His hand snaked up, up his lover’s body, stopping only at his tender neck.”{/i}"
 
+show rex neutral
+
 r "..."
 "but he might just do it anyway"
 
@@ -1669,6 +1755,9 @@ r "the way youd fling an alarm clock into the wall"
 "the thing that kept you moving day after day"
 "even when you resented it for it"
 "is gone"
+
+show rex thinking
+
 "..."
 
 r "i wonder how shes doing now"
@@ -1680,6 +1769,8 @@ r "you say something"
 
 y "I'm sure she's having a day like any other"
 
+show rex mocking
+
 r "thatd sting a bit after our last talk"
 
 nvl clear
@@ -1688,19 +1779,33 @@ r "oh well"
 "she must understand"
 "if i seem harsh"
 "its only because i know she can do better"
+
+show rex neutral
+
 "i might know how likable she is"
 "but who else is going to stick around to find out"
 "these kinds of girls"
 "theyre usually liked by either the teachers or their peers"
 "both can happen"
+
+show rex thinking
+
 "but neither..."
 
 y "Aren't you her peer?"
 
+show rex frustrated
+
 r "thats different"
 "besides were not really friends"
+
+show rex neutral
+
 "yet"
 "as usual i have deployed my normalsona"
+
+show rex bored
+
 "she barely even knows me"
 "thats why i wanna try rping with her"
 "theres something there that youd never touch if you just talked to eachother"
@@ -1709,16 +1814,24 @@ nvl clear
 
 r "everyone has their defenses up"
 "its easy to act like the surface is the whole thing..."
+
+show rex thinking
+
 "but its not enough anymore"
 
 r "although to be honest"
 "i dont know how people can have fun writing"
+
+show rex neutral
+
 "for me its like digging a hole with my bare hands"
 "its totally dark"
 "i just go where the ground is softer"
 "and eventually reach something"
 "but who knows what that even is"
 "all i know is that it was inevitable that id end up there"
+
+show rex mocking
 
 r "so yeah a psychologist could have a field day with my stuff"
 "not that ive tried"
@@ -1738,9 +1851,13 @@ label rdespair1:
     
     nvl clear
 
+    show rex thinking
+
     y "It's okay"
     "Everyone has these urges, more or less"
     
+    show rex judging
+
     r "somehow i doubt that"
     "or else we wouldnt be here"
     
@@ -1761,6 +1878,8 @@ label rviolence1:
 
     y "Why not?"
 
+    show rex judging
+
     r "what kinda question is that"
     "im not that naive"
     "thats all"
@@ -1774,6 +1893,8 @@ label rviolence1:
 
 label rcont1:
 
+show rex eyebrow twitch
+
 r "man"
 "i thought having you would make things easier"
 "but it was a stupid idea"
@@ -1782,6 +1903,9 @@ r "man"
 "at least youd know what he stood for"
 "all i have from her are a handful of texts"
 "mostly about class"
+
+show rex thinking
+
 "and this picture we took at the bakery"
 
 nvl clear
@@ -1800,12 +1924,17 @@ label rviolence2:
 
     y "That's a unique outfit"
     
+    show rex mocking -frustrated
+
     r "“unique” lol"
     "now you understand what i see in her"
     
     y "She seems more interested in her croissant than in you"
     
     r "hey"
+
+    show rex neutral
+
     "fuck you."
     
     "\n(+1 VIOLENCE?)"
@@ -1818,12 +1947,17 @@ label rdespair2:
 
     y "You look uncomfortable"
     
+    show rex neutral
+
     r "what"
     "no i dont"
 
     y "There’s tension around your eyes"
     
     r "come on"
+
+    show rex judging
+
     "i am THE most laid back person youll ever meet"
     "i was probably just squinting bc the coffee was too hot"
     "whos comfortable in a place like this anyway"
@@ -1838,15 +1972,24 @@ label rcont2:
 
 nvl clear
 
+show rex thinking
+
 r "hold on"
 "i just got"
+
+show rex mocking
+
 "the most esoteric spam mail of my life LMFAO?"
 
 y "What is it"
 
+show rex thinking
+
 r "it looks like its quoting something"
 "bla bla cleanse the world of my evil bla bla"
 "just a bunch of half remembered occultic nonsense"
+
+show rex neutral
 
 r "but thats weird"
 "it came to my uni inbox"
@@ -1862,6 +2005,9 @@ y "Do they know your name because they knew your address, or the other way aroun
 
 r "that is indeed the question my dear watson"
 "unless there was a data breach we dont know about"
+
+show rex judging
+
 "run a search will you"
 
 y "..."
@@ -1870,9 +2016,14 @@ y "..."
 r "cant say i trust you much"
 "but lets go with that for now"
 
+show rex neutral
+
 r "still"
 "this guy is kinda funny"
 "{i}“I had thought for a long time that i would rather die than debase myself like you do”{/i}"
+
+show rex mocking
+
 "bro you dont even know meeee you probably got my info from an illegal forum somewhere"
 "you think they accidentally sent me their novel? lol"
 
@@ -1888,9 +2039,14 @@ r "but i must say"
 "like we get it youve been a loser all your life"
 "should we restructure society around it? maybe we could have a grant for people who will never be wanted anywhere"
 "or a government assigned girlfriend program?"
+
+show rex frustrated
+
 "give me a break"
 "id understand if life dealt you a bad hand"
 "but you dont have to be so obvious about it"
+
+show rex uncollected
 
 r "wait"
 "why is there a picture of you"
@@ -1903,13 +2059,21 @@ r "this is from..."
 "when we last saw eachother"
 "on the way back from the library"
 "everything was going well"
+
+show rex frustrated -judging
+
 "and then i raised my voice a little more than usual"
+
+show rex thinking
 
 r "the photo is a bit blurry"
 "but you can clearly tell"
 "shes crumpled on the ground"
 
 r "come to think of it"
+
+show rex neutral
+
 "it did say something about reporting me for my behavior"
 "..."
 "check the sender for me"
@@ -1927,9 +2091,17 @@ r "its weird though"
 
 r "no its not even that"
 "this is"
+
+show rex frustrated
+
 "incoherent"
 "{i}“I cant fault you for what is not in your nature which regarding your fellow men as more than props in your showroom life apparently is. Having said that, even badly trained dogs must occasionally pay for their mistakes”{/i}"
+
+show rex judging
+
 "do i"
+
+
 "talk to anyone like this?"
 
 menu(nvl=True):
@@ -1947,6 +2119,9 @@ label rdespair3:
     y "Are you sure youre as friendly with them as you think you are?"
     
     r "i am literally just some girl in their class"
+
+    show rex uncollected
+
     "if thats enough to make someone hate me this much"
     "im not sure what i can do"
     
@@ -1960,6 +2135,8 @@ label rviolence3:
 
     y "You're not exactly an open book yourself"
     
+    show rex eyebrow twitch
+
     r "are you kidding?"
     "lets not compare the two"
     
@@ -1971,8 +2148,13 @@ label rcont3:
 
 nvl clear
 
+show rex uncollected
+
 r "god why am i even taking this seriously"
 "its so blurry you cant even tell thats me"
+
+show rex frustrated
+
 "and we were just TALKING"
 "she probably tripped on something like an idiot"
 "even if they reported it"
@@ -1980,8 +2162,12 @@ r "god why am i even taking this seriously"
 "i should just delete this and move on"
 "we were in the middle of a scene..."
 
+show rex neutral
+
 r "but really"
 "who could it be"
+
+show rex thinking
 
 r "the picture looks zoomed in"
 "doesnt seem like they came across us on accident"
@@ -1992,16 +2178,27 @@ y "Maybe they were following her"
 
 nvl clear
 
+show rex judging
+
 r "what"
 "i mean fuck maybe"
 "not like any of this has made sense so far"
 "but shes even more of an introvert than i am"
 "why would anyone"
+
+show rex thinking
+
 "..."
+
+show rex neutral
 
 r "i think i know who it is"
 
+
 r "oh this is FUNNY"
+
+show rex mocking
+
 "i bet this isnt even about her"
 "no im sure he likes her"
 "as much as you can like someone youve never even talked to"
@@ -2016,7 +2213,13 @@ nvl clear
 
 r "dragging around a grudge from what"
 "middle school?"
+
+show rex neutral
+
 "like hes the only guy on earth to have ever been bullied"
+
+show rex thinking
+
 "or like i dont know his goddamn address"
 
 y "Youre not planning on going over there, are you?"
@@ -2026,11 +2229,19 @@ r "why not"
 "im so curious"
 "what made him think he could try to ruin my life?"
 "he should understand the value of a perfect record"
+
+
 "even if hes never had one..."
+
+show rex mocking
+
 "did his cartoons not teach him not to be so fucking underhanded?"
 "like"
 "only the hero gets the girl, you know"
 "creeps who take photos of her lying on the pavement"
+
+show rex thinking
+
 "get something else"
 
 "violence = [violence]\n despair = [despair]"
