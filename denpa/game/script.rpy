@@ -1,4 +1,4 @@
-﻿# characters TODO add color
+# characters TODO add color
 
 define y = Character("IRIS", kind=nvl, bold = True)
 define p = Character("LION", kind=nvl, image="lion", bold = True)
@@ -1137,83 +1137,146 @@ label pv:
 
 
 
-"1V: pygmalion, triumphant"
+"""\nMy hand was already on the doorknob when I noticed the sound.
 
-"My hand was already on the doorknob when I noticed the sound."
-"I opened it up to find –"
+I opened it up to find –
 
-d "Hey."
+\"Hey.\"
 
-"I blinked a little more forcefully than usual. Was my mind playing tricks on me? It couldn’t have been more than an hour since I sent the message."
+I blinked a little more forcefully than usual.
 
-d "What are you doing here?"
+Was my mind playing tricks on me? It couldn’t have been more than an hour since I sent the message.
 
-"Her stance was nonchalant, like she should ask me the same thing. This was my territory, though. Irritation was already at the tips of my fingers."
+\"What are you doing here?\"
 
-d "You’re really gonna make me stand here in the doorway?"
+Her stance was nonchalant, like she should ask me the same thing.
 
-"As much as I hated the idea of having her in the apartment, I didn’t want the neighbors overhearing us either. I stood aside."
-"She waltzed in, outdoor shoes trampling on old carpet. She was looking the place up and down as if making sure everything was in the place she left it. Beyond us, the curtains were whipping in the wind. I was suddenly aware of the smell."
-"This was fine. Great, really. I was ready to make do with a written apology, but now that I saw her face, the anger I’d forgotten about was starting to come back to me."
-"{i}Audrey. I thought we were friends.{/i}"
-"Just the first in a long line of disappointments."
+This was {i}my{/i} territory, though. Irritation was already at the tips of my fingers.
 
-"She turned back towards me."
+\"You’re really gonna make me stand here in the doorway?\"
 
-d "You know, I really don’t get you. You should be old enough to drink by now. Wouldn’t that be a better use of your time? If not a better use of your brain.{p}Why are you so hung up on me?"
+As much as I hated the idea of having her in the apartment, I didn’t want the neighbors overhearing us either. I stood aside.
 
-"She said it like we were only talking about an embarrassing crush. Did she even read my message?"
+She waltzed in, outdoor shoes trampling on old carpet.
 
-d "You’re the one who can’t seem to leave me alone."
+She was looking the place up and down as if making sure everything was in the place she left it. Beyond us, the curtains were whipping in the wind.
 
-"It was a process that was put into motion a long time ago."
+I was suddenly aware of the smell.
 
-d "Hahaha, WHAT?"
+This was fine. Great, really.
 
-"Complete and utter isolation. Blinding my senses until I’m too afraid to take a single step. Breaking down my world piece by piece. Why else would she treat Iris that way?"
+I was ready to make do with a written apology, but now that I saw her face, the anger I’d forgotten about was starting to come back to me.
 
-d "I told you. If you don’t want to apologize, then just... stop. I don’t want to see you again."
+{i}Audrey. I thought we were friends.{/i}
 
-"Maybe it was decided before I was even born."
+Just the first in a long line of disappointments.
 
-d "I’m not in your class because I fucking want to be!"
+She turned back towards me.
 
-"She took a step towards me. I knew her type: she was always demanding for something to be fixed. In her eyes, I must’ve been an intolerable stain. Thanks to that, any aggression was justified."
+\"You know, I really don’t get you. You should be old enough to drink by now.
 
-d "What do you expect me to do? Just disappear?"
+Wouldn’t that be a better use of your time? If not a better use of your {i}brain{/i}.
 
-d "..."
+Why are you so hung up on me?\"
 
-"I gave her a slow nod. I’d be lying if I said I never considered it before."
-"In my mind’s eye, the playground, the classroom, the convenience store and the street without Audrey in it were all so clear. One less voice in the choir, but that was all. If the world ended today and I was asked to recreate it, I’d do it exactly so."
-"Her expression contorted with rage. It felt like I could see right up her nose if it weren’t for the light. I took a step back. Since when could she make such a horrible face?"
+She said it like we were only talking about an embarrassing crush. Did she even read my message?
 
-d "The world doesn’t revolve around you, asshole!"
+\"You’re the one who can’t seem to leave me alone.\"
 
-"It happened before I could even register it. One moment, she was standing before me, and then she leapt for my neck, eyes lit with sparks."
+It was a process that was put into motion a long time ago.
 
-y "i think even a no has meaning"
-"sometimes i don’t even realize it’s an option until i hear someone else say it"
+\"Hahaha, WHAT?\"
 
-"I acted on pure reflex. I felt my back connect to the door and my hands grab hold of her wrists and push –"
-"She hit the ground with a thud."
-"Seeing her limbs twisted around her should’ve made me feel something. Instead, all I could think was {i}she wanted this to be me{/i}. The air suddenly felt too cold on my skin; I realized I was drenched in sweat. I pulled my phone from my pocket."
+Complete and utter isolation. Blinding my senses until I’m too afraid to take a single step. Breaking down my world piece by piece. Why else would she treat Iris that way?
 
-"I did it"
-"I thought i would have to ask her to leave us alone"
-"But i just did it"
+\"I told you. If you don’t want to apologize, then just... stop. I don’t want to see you again.\"
 
-"The pinch of her brows was quickly coming undone. She must’ve lost consciousness on her way down. It made me think of one of grandma’s stories."
-"It was a bright, early autumn day. She was on her way to the post office when the lady walking in front of her tripped and fell, never to get up again. {i}She landed in the most unfortunate way,{/i} she said. It was over in an instant. I wasn’t allowed to leave the house for a week afterwards; she couldn’t relax unless she could see me."
+Maybe it was decided before I was even born.
 
-"Did Audrey hurt herself on the threshold?"
+\"I’m not in your class because I fucking want to be!\"
 
-"I looked at her again."
-"There was no blood, but I couldn’t hear her breathing over the sound of the curtains."
-"She looked more like the girl I knew now: the one who barely came up to the cabinet next to her. Dirty fingers, garish shirts, polkadots. Castles in the sand. It all felt like a lifetime ago. What kind of face was I making? I couldn’t tell."
-"I crouched down beside her. Out of the corner of my eye, I saw a crow land on the balcony railing. Audrey’s skin was flushed with sunlight; her collarbone cast soft shadows below. She looked like she could’ve been ill."
+She took a step towards me.
 
-"I didn’t hear anything except the ringing in my ears."
+I knew her type: she was always demanding for something to be fixed.
+
+In her eyes, I must’ve been an intolerable stain. Thanks to that, any aggression was justified.
+
+\"What do you expect me to do? Just disappear?\"
+
+\"...\"
+
+I gave her a slow nod.
+
+I’d be lying if I said I never considered it before.
+In my mind’s eye, the playground, the classroom, the convenience store and the street without Audrey in it were all so clear. One less voice in the choir, but that was all.
+
+If the world ended today and I was asked to recreate it, I’d do it exactly so.
+
+Her expression contorted with rage. It felt like I could see right up her nose if it weren’t for the light. I took a step back.
+
+Since when could she make such a horrible face?
+
+\"The world doesn’t revolve around you, asshole!\"
+
+It happened before I could even register it.
+
+One moment, she was standing before me, and then she leapt for my neck, eyes lit with sparks.
+
+{i}\"i think even a no has meaning{/i}
+
+{i}sometimes i don’t even realize it’s an option until i hear someone else say it\"{/i}
+
+I acted on pure reflex. I felt my back connect to the door and my hands grab hold of her wrists and push –
+
+She hit the ground with a thud.
+
+Seeing her limbs twisted around her should’ve made me feel something.
+
+Instead, all I could think was {i}she wanted this to be me{/i}.
+
+The air suddenly felt too cold on my skin; I realized I was drenched in sweat. I pulled my phone from my pocket.
+
+I did it
+
+I thought i would have to ask her to leave us alone
+
+But i just did it
+
+The pinch of her brows was quickly coming undone.
+
+She must’ve lost consciousness on her way down.
+
+It made me think of one of grandma’s stories. 
+
+It was a bright, early autumn day.
+
+She was on her way to the post office when the lady walking in front of her tripped and fell, never to get up again.
+
+{i}She landed in the most unfortunate way,{/i} she said. It was over in an instant.
+
+I wasn’t allowed to leave the house for a week afterwards; she couldn’t relax unless she could see me.
+
+Did Audrey hurt herself on the threshold?
+
+I looked at her again.
+
+There was no blood, but I couldn’t hear her breathing over the sound of the curtains.
+
+She looked more like the girl I knew now: the one who barely came up to the cabinet next to her.
+
+Dirty fingers, garish shirts, polkadots. Castles in the sand. It all felt like a lifetime ago.
+
+What kind of face was I making? I couldn’t tell.
+
+I crouched down beside her.
+
+Out of the corner of my eye, I saw a crow land on the balcony railing.
+
+Audrey’s skin was flushed with sunlight; her collarbone cast soft shadows below. She looked like she could’ve been ill.
+
+I didn’t hear anything except the ringing in my ears.
+
+\n1V: pygmalion, triumphant"""
 return
 
 #"~end~?????"
