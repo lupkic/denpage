@@ -80,13 +80,15 @@ define config.has_voice = False
 
 ## Entering or exiting the game menu.
 
-define config.enter_transition = dissolve
-define config.exit_transition = dissolve
+define pixeldissolve = ImageDissolve("images/pixeldissolve.jpg", 0.5, time_warp=_warper.easeout)
+
+define config.enter_transition = pixeldissolve
+define config.exit_transition = pixeldissolve
 
 
 ## Between screens of the game menu.
 
-define config.intra_transition = dissolve
+define config.intra_transition = None
 
 
 ## A transition that is used after a game has been loaded.

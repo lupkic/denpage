@@ -9,8 +9,8 @@
 
 
 ## The width and height of thumbnails used by the save slots.
-define config.thumbnail_width = 266
-define config.thumbnail_height = 150
+define config.thumbnail_width = 385
+define config.thumbnail_height = 217
 
 
 screen save():
@@ -27,6 +27,7 @@ screen load():
 
     tag menu
 
+    add "#000"
     add HBox(Solid("#000", xsize=325),"images/quickbar horizontal.png") # The background; can be whatever
 
     use file_slots(_("Load"))
@@ -94,9 +95,6 @@ screen file_slots(title):
 
                 if config.has_autosave:
                     textbutton _("{#auto_page}A") action FilePage("auto")
-
-                if config.has_quicksave:
-                    textbutton _("{#quick_page}Q") action FilePage("quick")
 
                 ## range(1, 10) gives the numbers from 1 to 9.
                 for page in range(1, 6):

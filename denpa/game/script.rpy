@@ -11,9 +11,14 @@ define dis = { "master" : Dissolve(3.0) }
 #TODO key "mousedown_1" action 
 #TODO make choice menu work correctly
 
-style nvl_dialogue:
+style nvl_dialogue: #text outline
     outlines [ (3, "#000", absolute(0), absolute(0)) ]
 
+style nvl_label: #name outline
+    outlines [ (3, "#000", absolute(0), absolute(0)) ]
+
+style nvl_button_text: #choice outline
+    outlines [ (3, "#000", absolute(0), absolute(0)) ]
 
 transform lion_scr: #position for pygs image
     xalign 0.95

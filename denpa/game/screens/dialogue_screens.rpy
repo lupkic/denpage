@@ -93,7 +93,7 @@ screen quick_menu():
             image 'quickbar.png' at qbar
         vbox:
             if nvl_mode == "rex":
-                style_prefix "rex"
+                style_prefix "inverse"
             else:
                 style_prefix "quick"
 
@@ -117,7 +117,7 @@ style quick_vbox: #quickmenu box
     yalign 0.50
     spacing 40
 
-style rex_vbox:
+style inverse_vbox:
     xalign 0.980 
     yalign 0.50
     spacing 40
@@ -160,7 +160,10 @@ screen nvl(dialogue, items=None):
 
             textbutton i.caption:
                 action i.action
-                style "nvl_button"
+                if nvl_mode == "rex":
+                    style "rex_button"
+                else:
+                    style "nvl_button"
 
     # add SideImage() xalign 0.0 yalign 1.0
 
@@ -193,7 +196,7 @@ screen nvl_dialogue(dialogue):
 
 ## This controls the maximum number of NVL-mode entries that can be displayed at
 ## once.
-define config.nvl_list_length = 15
+define config.nvl_list_length = 20
 
 style ed_window:
     is default
@@ -220,7 +223,7 @@ style nvl_window:
 style nvl_label:
     is say_label
     xpos 170
-    ypos 40
+    ypos 30
     xsize 10
     min_width 10
     textalign 1.0
@@ -229,21 +232,34 @@ style nvl_label:
 style nvl_dialogue:
     is say_dialogue
     xpos 170
-    ypos 50 yanchor -5
+    ypos 35 yanchor -10
     xsize 700
     min_width 100
 
 # The style for dialogue said by the narrator in NVL
 style nvl_thought:
     xpos 170
-    ypos -10 yanchor -5
+    ypos -10 yanchor -10 #yanchor -15 for ed
     xsize 700
     min_width 100
     # is nvl_dialogue
 
-style nvl_button:
-    xpos 675
-    xanchor 0.0
+style nvl_button: #nvl choice button position
+    xpos 170
+    ypos 25
+
+style rex_button: #special rex button position for rex
+    xpos 410
+    ypos 25
+
+style nvl_button_text: #nvl choice button text
+    font "CarroisGothic-Regular.ttf"
+    size 20
+    bold False
+#    xanchor 0.0
+
+style rex_button_text:
+    is nvl_button_text
 
 ## Bubble screen ###############################################################
 ##
