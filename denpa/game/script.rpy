@@ -6,12 +6,13 @@ define r = Character("REX", kind=nvl, image="rex", bold = True)
 define d = Character(kind=nvl, what_prefix='"', what_suffix='"') #dialog for endings?
 define narrator = nvl_narrator
 # define config.nvl_paged_rollback = True
+define dis = { "master" : Dissolve(3.0) }
 
 #TODO key "mousedown_1" action 
 #TODO make choice menu work correctly
 
 style nvl_dialogue:
-    outlines [ (5, "#000", absolute(0), absolute(0)) ]
+    outlines [ (3, "#000", absolute(0), absolute(0)) ]
 
 
 transform lion_scr: #position for pygs image
@@ -30,7 +31,7 @@ label start:
     $ despair = 0
     $ nvl_mode = 0
 
-    scene bg1
+    scene bg messy
 
     menu:
         "case 1":
@@ -44,7 +45,7 @@ label chat_pyg:
 
 $nvl_mode = "pyg" #this does nothing bc pyg is default but its good to make him feel included
 
-scene bg2 at right #TODO figure out nvl fade effect
+scene bg blue2 #TODO figure out nvl fade effect
 show lion neutral at lion_scr
 
 play music loopish fadein 1 volume 0.7
@@ -172,6 +173,7 @@ show lion neutral
 "And then you just went away"
 
 nvl clear
+show bg bluish2 with dis
 
 p "I know youre too good for me. Its not right"
 
@@ -185,7 +187,6 @@ show lion neutral
 "Shes waiting for you to slip up"
 "That viper"
 
-show lion miffed
 
 "Its true that i havent really talked to her but I dont think thats the only way to really know a person"
 "It might actually be one of the worst ways"
@@ -218,9 +219,11 @@ show lion blush
 "You make everything so"
 "I dont know"
 
-show lion neutral
 
 "..."
+
+show lion neutral
+
 "I just get stuck in the doorway wondering what ill even do with this stupid degree"
 "The internship was a bust"
 "And now this"
@@ -258,9 +261,11 @@ show lion right
 "and i just go out against the weather"
 "hoping that something bad will happen thatll take it all away from me"
 
-show lion hiding
 
 "out of my hands and into a hospital room"
+
+show lion hiding
+
 "where the people with real reasons go"
 "Real human beings"
 
@@ -271,6 +276,8 @@ p "Nothing ever happens"
 p "I dont know how other people do it"
 
 nvl clear
+
+show bg complex with dis
 
 p "In the end..."
 "theyre just building castles in the sand"
@@ -443,6 +450,7 @@ p "It means a lot to me that you dont judge"
 "Stuff like that"
 
 show lion neutral
+show bg finely2 with dis
 
 "I wonder about it sometimes"
 "If anything else made me feel this way"
@@ -545,6 +553,8 @@ show lion sweat
 
 "Did i not lock the door after i took the groceries in"
 
+show bg danger
+
 play music heartbeat fadein 1 volume 0.7
 
 "I cant see it from here"
@@ -556,6 +566,9 @@ show lion hiding
 "It would be too easy"
 "Someone couldve gotten in the building after me and waited in the stairway"
 "Until i"
+
+show lion gone
+
 "I locked the kitchen door but i dont know what else to do"
 "Should i pretend to not be home"
 
@@ -579,6 +592,7 @@ p "It doesnt make any sense"
 
 stop music fadeout 1
 show lion hand
+show bg finely2 with dis
 
 p "Sorry"
 "Thank god you didnt call the cops"
@@ -671,6 +685,9 @@ show lion hiding
 "All those things they forgot about"
 "Their toys and cartoons and grandma too"
 "I keep them safe"
+
+show bg sundown with dis
+
 "..."
 
 nvl clear
@@ -825,7 +842,7 @@ show lion right
 
 p "When Audrey"
 
-show lion hiding
+show lion pissed
 
 "That bitch laid a hand on you i cant believe she did that still i mean it couldnt have possibly been that important she never talks about ANYTHING important so why did she have to"
 "Shove you like that"
@@ -836,11 +853,14 @@ nvl clear
 p "She didnt even look back to see you go down"
 "and stay there"
 "You were coughing your lungs out"
+
+show lion hiding
+
 "No she mustve heard."
 "She just didnt want to"
 "“MAKE A SCENE”"
 
-show lion neutral
+show lion pissed
 
 p "But I saw them all"
 "Everyone walking by"
@@ -867,6 +887,7 @@ return
 label pviolence2:
     
     nvl clear
+    show bg orange2 with dis
     
     y "i don’t know why i thought i could trust her"
     "i’m really sorry"
@@ -912,6 +933,8 @@ label pviolence2:
 label pdespair2:
 
     nvl clear
+    show bg orange2 with dis
+
 
     y "sometimes"
 
@@ -1088,7 +1111,7 @@ stop music fadeout 1
 "violence = [violence]\n despair = [despair]"
 
 nvl clear
-scene bg14
+scene bg middle
 $ nvl_mode = "ed"
 $ gui.xanchor = 400
 $ gui.rebuild()
@@ -1283,6 +1306,8 @@ $nvl_mode = "rex"
 r "ok lets take it from the top"
 
 play music street fadein 1
+show rex neutral at rex_scr
+show bg bluish var with dis
 
 "{i}“He ran his fingers down his lover’s sternum. The skin bobbed and knotted beneath his touch, pacing an unsteady rhythm. Scar tissue: some self-inflicted, some almost certainly coaxed out of others. Jiro always brought out the worst in people. Even now, as he lay there beneath him, his gaze was merely confused. Was he wrong for trying to treat him gently for once?”{/i}"
 
@@ -1290,6 +1315,8 @@ r "remember this is a tale of MADNESS and OBSESSION"
 "i want to see them writhing in It"
 "eachothers blood i mean"
 "among other things"
+
+show rex thinking
 
 r "i remain undecided about cum"
 "ambivalent even"
@@ -1302,12 +1329,17 @@ r "i remain undecided about cum"
 
 nvl clear
 
+show rex neutral
+
 r "you and me were gonna prove that real human connection is possible"
 "it might sound funny but its my last shot"
 "so do your best for me"
 "ok?"
 "none of that silly business mixing up their eye colors and whatnot"
 "although..."
+
+show rex thinking
+
 "would she?"
 "i guess i dont have very high expectations of a gacha player"
 
@@ -1319,6 +1351,9 @@ r "i was surprised when she said she was interested in this pairing at all"
 "just because were too good to be bought by one direction anymore doesnt mean anyones gotten real"
 "its all interchangeable to those people"
 "whoever moves first gets the clout. thats all there is to it"
+
+show rex neutral
+
 "more future online detritus for the pile"
 "i just wish they wouldnt confuse taste with intelligence"
 
@@ -1329,7 +1364,7 @@ r "but thats neither here nor there"
 "wont know unless i try"
 
 stop music fadeout 1.5
-show rex neutral at rex_scr
+show rex neutral
 
 r "{i}“Something dark and vital red squirmed in his stomach. The man he loved, in all his frail beauty, was waiting with open arms. His limbs became paralyzed with certainty. If Haku laid a hand on him now, he would crumble. All with that same smile on his face...”{/i}"
 
@@ -1397,6 +1432,7 @@ show rex thinking
 nvl clear
 
 show rex neutral
+show bg tunnel var with dis
 
 y "{i}“How many times had they done this already? He saw no reason for Haku to hesitate. He cocked his head, making another gesture of invitation. Their earlier brush with death only made him more desperate; his body strained to lift itself to meet him.”{/i}"
 
@@ -1533,7 +1569,7 @@ show rex mocking
 r "now youre speaking my LANGUAGE"
 
 nvl clear
-
+show bg finely var with dis
 
 r "i mean it follows from what we were doing so fair play i guess"
 
@@ -1702,6 +1738,7 @@ show rex neutral
 "not really my style"
 
 nvl clear
+show bg sundown2 var with dis
 
 r "basically"
 "what i do is already sort of collaborative"
@@ -1900,6 +1937,7 @@ label rviolence1:
 label rcont1:
 
 show rex eyebrow twitch
+show bg orange var with dis
 
 r "man"
 "i thought having you would make things easier"
@@ -1970,7 +2008,7 @@ label rdespair2:
     "i guarantee you right now"
     "if you could eat you wouldnt want people watching you do it either"
     
-    "(\n+1 DESPAIR)"
+    "\n(+1 DESPAIR)"
     $ despair += 1
     jump rcont2
 
@@ -2131,7 +2169,7 @@ label rdespair3:
     "if thats enough to make someone hate me this much"
     "im not sure what i can do"
     
-    "(\n+1 DESPAIR)"
+    "\n(+1 DESPAIR)"
     $ despair += 1
     jump rcont3
 
@@ -2146,7 +2184,7 @@ label rviolence3:
     r "are you kidding?"
     "lets not compare the two"
     
-    "(\n+1 VIOLENCE)"
+    "\n(+1 VIOLENCE)"
     $ violence += 1
     jump rcont3
 
@@ -2160,6 +2198,8 @@ r "god why am i even taking this seriously"
 "its so blurry you cant even tell thats me"
 
 show rex frustrated
+
+play sound "typing.mp3"
 
 "and we were just TALKING"
 "she probably tripped on something like an idiot"
@@ -2251,6 +2291,7 @@ show rex thinking
 "get something else"
 
 "violence = [violence]\n despair = [despair]"
+stop music fadeout 1
 
 $ nvl_mode = "ed"
 $ gui.xanchor = 400

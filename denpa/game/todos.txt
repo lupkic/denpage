@@ -1,0 +1,4 @@
+-text cuts off weird..
+-save menu thumbsize etc you know this better than i do prolly. i think we dont need the quick page since we dont actually have a quicksave/load btn?
+-nvl menus dont actually show up as part of the body text even tho the renpy tut made it sound like thats default behavior
+-ctc
