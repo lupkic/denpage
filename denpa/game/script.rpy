@@ -79,6 +79,8 @@ show lion sweat
 "With my luck id hit my head"
 "Bleed out with my hand raised up like im just saying hello to the linoleum"
 
+nvl clear
+
 show lion right
 
 p "It wouldnt even make the papers"
@@ -86,9 +88,6 @@ p "It wouldnt even make the papers"
 "“Wretched worm breathes its last”"
 "And you have to click to find out if its a worm you care about"
 "But its just a bunch of ads"
-
-nvl clear
-
 
 p low "So hey"
 "You know that exam i said i was worried about?"
@@ -106,9 +105,10 @@ show lion blush
 
 "Dating"
 
+nvl clear
 show lion neutral
 
-"Have you read Weininger?"
+p "Have you read Weininger?"
 "I can send you a good summary but basically I think"
 
 play sound "barking.mp3"
@@ -127,7 +127,6 @@ show lion neutral
 "They dont even know theyre being used"
 "to keep people like me in line"
 
-nvl clear
 
 show lion right
 
@@ -149,9 +148,10 @@ play sound "doorbell.mp3"
 p "I dont even know what her problem is"
 "Am i not allowed to be happy or something?"
 
+nvl clear
 show lion right
 
-"Of course not"
+p "Of course not"
 
 play sound "doorbell.mp3"
 
@@ -177,7 +177,6 @@ show lion neutral
 
 "And then you just went away"
 
-nvl clear
 show bg bluish2 with dis
 
 p "I know youre too good for me. Its not right"
@@ -192,11 +191,11 @@ show lion neutral
 "Shes waiting for you to slip up"
 "That viper"
 
-
 "Its true that i havent really talked to her but I dont think thats the only way to really know a person"
 "It might actually be one of the worst ways"
 
 show lion right
+nvl clear
 
 p "I know youre just lonely. I wish i could do more about it"
 "Am i not enough?"
@@ -208,8 +207,6 @@ p "Wait im getting a call"
 "Unknown number. This is seriously starting to piss me off"
 
 play sound "television.mp3"
-
-nvl clear
 
 show lion neutral
 
@@ -226,10 +223,11 @@ show lion blush
 
 
 "..."
+nvl clear
 
 show lion neutral
 
-"I just get stuck in the doorway wondering what ill even do with this stupid degree"
+p "I just get stuck in the doorway wondering what ill even do with this stupid degree"
 "The internship was a bust"
 "And now this"
 "Ill do it next year i guess"
@@ -248,7 +246,6 @@ show lion neutral
 
 "in kindergarten"
 
-nvl clear
 $ renpy.music.set_volume(1, 0, 'music')
 
 p "Did i ever tell you"
@@ -260,13 +257,14 @@ p "Did i ever tell you"
 show lion right
 
 "But i know."
-"Some days i get the sense that theres nowhere for me"
+
+nvl clear
+
+p "Some days i get the sense that theres nowhere for me"
 "I cant eat anything"
 "or look people in the eye"
 "and i just go out against the weather"
 "hoping that something bad will happen thatll take it all away from me"
-
-
 "out of my hands and into a hospital room"
 
 show lion hiding
@@ -276,11 +274,10 @@ show lion hiding
 
 show lion right
 
-p "Nothing ever happens"
+"Nothing ever happens"
 
 p "I dont know how other people do it"
 
-nvl clear
 
 show bg complex with dis
 
@@ -293,9 +290,10 @@ show lion neutral
 "Nobody gets to enjoy it"
 "Not those who work and not those who steal"
 
+nvl clear
 play sound "prelude_l.mp3"
 
-"Its not our fault we were born too late"
+p "Its not our fault we were born too late"
 
 show lion happy
 
@@ -320,21 +318,20 @@ show lion right
 "Just because there was no answer doesnt mean no one saw"
 "You should always assume it leaves a mark somewhere"
 
-nvl clear
-
 show lion neutral
 
 p "I was taught to fear the internet just like that"
 "But it doesnt seem all that true anymore"
-"Your every movement"
+
+nvl clear
+
+p "Your every movement"
 "has that gravity"
 
 show lion blush
 
 "Like youre absolutely sure those words will disappear"
 "without ever being heard"
-
-
 "but still..."
 
 show lion neutral
@@ -345,8 +342,6 @@ p "Still no response huh"
 show lion right
 
 "Just to let me know youre there"
-
-nvl clear
 
 play sound "barking2.mp3"
 show lion neutral
@@ -372,9 +367,10 @@ show lion hiding
 "Thats just the kind of person she is"
 "Because she has nothing of her own"
 
+nvl clear
 show lion happy
 
-"Maybe you pity her. Youre a good person after all"
+p "Maybe you pity her. Youre a good person after all"
 "But it wont end well"
 
 show lion neutral
@@ -391,8 +387,6 @@ show lion right
 
 "One mistake..."
 
-nvl clear
-
 p "In my dream you were asking me to run away together"
 "I didnt know what to say"
 "And then you went away"
@@ -404,7 +398,10 @@ show lion low
 p "I checked the door"
 "It was my grocery delivery"
 "Forgot i did that"
-"There is no milk... They didnt even have my second choice apparently"
+
+nvl clear
+
+p "There is no milk... They didnt even have my second choice apparently"
 "Fuck my life"
 "Last time they did this with my shower gel"
 
@@ -428,17 +425,15 @@ show lion happy
 "I was worried about the episode count"
 "I dont always like how these things are paced"
 "Thats why i dont watch a lot of older shows"
-
-nvl clear
-
-p "But i think the length works for it"
+"But i think the length works for it"
 "You really get to know the characters as people"
 "Especially when i put it on while i eat"
 "It helps the house feel less empty"
 
 show lion blush
+nvl clear
 
-"Is that a sad thing to say"
+p "Is that a sad thing to say"
 "It just makes me think of all the little girls following it week by week back then"
 "Going to class and talking about the latest episode with the other kids"
 "Begging mom for the toys"
@@ -573,13 +568,11 @@ show lion hiding
 "Until i"
 
 show lion gone
-
-"I locked the kitchen door but i dont know what else to do"
-"Should i pretend to not be home"
-
 nvl clear
 
-p "Iris im scared"
+p"I locked the kitchen door but i dont know what else to do"
+"Should i pretend to not be home"
+"Iris im scared"
 "Why is this happening to me i dont even have anything worth stealing"
 "I cant get myself to get out from udner the table"
 "There was a cheese knife so i grabbed that"
@@ -598,13 +591,13 @@ p "It doesnt make any sense"
 stop music fadeout 1
 show lion hand
 show bg finely2 with dis
+nvl clear
 
 p "Sorry"
 "Thank god you didnt call the cops"
 "this hpapens sometimes"
 "Happens"
 
-nvl clear
 play music loopish fadein 1 volume 0.7
 show lion low
 
@@ -653,11 +646,11 @@ show lion right
 "It just gets quiet here"
 "Wasnt as bad when grandma was still around"
 
+nvl clear
 #TODO:"--this could be a good place to set up some asinine parallel convos for the bot and maybe even cover pyg up with them. actually i think conspiracies too<3"
 
-y "do you miss her"
+y "do you miss her?"
 
-nvl clear
 
 p "I dont know. She was a nag"
 "I couldnt do anything right in her eyes"
@@ -685,8 +678,9 @@ show lion low
 "Why is it creepy only when i do it?"
 
 show lion hiding
+nvl clear
 
-"They should be grateful"
+p "They should be grateful"
 "All those things they forgot about"
 "Their toys and cartoons and grandma too"
 "I keep them safe"
@@ -695,13 +689,12 @@ show bg sundown with dis
 
 "..."
 
-nvl clear
 
 menu(nvl=True): 
-    "you're fine":
+    "1. you're fine":
         jump pviolence1
 
-    "you're special":
+    "2. you're special":
         jump pdespair1
 return
 
@@ -791,14 +784,14 @@ label pdespair1:
     
     y "it’s not a bad thing"
     "is it?"
-    
-    nvl clear
-    
+        
     show lion hand
 
     p "Oh god i"
     "When i said that i didnt mean it like"
     "Sorry"
+
+    nvl clear
     
     y "you don't even know what you're apologizing for do you"
     "it’s okay"
@@ -879,13 +872,11 @@ show lion right
 p "I cant stand it"
 "I really cant..."
 
-nvl clear
-
 menu(nvl=True):
-    "i'm sorry for not listening to you":
+    "1. i'm sorry for not listening to you":
         jump pviolence2
 
-    "i hate them so much":
+    "2. i hate them so much":
         jump pdespair2
 return
 
@@ -1069,10 +1060,12 @@ p "Youre right"
 show lion happy
 
 "How did i not see it before"
-"I gave up too early"
-"When there still was something i could do"
 
 nvl clear
+
+p "I gave up too early"
+"When there still was something i could do"
+
 
 p "Haha"
 "I feel like i could just get on a bike and ride until my legs give out"
@@ -1090,19 +1083,23 @@ p "Oh yeah"
 "My heart is beating so fast"
 "I dont feel like waiting around today"
 
-p "Look"
-"Two of them"
-
 nvl clear
 
-p "{image=bg/pigeon2_resize.png}"
+p "Look"
+"{image=bg/pigeon2_resize.png}"
+"Two of them"
+
+
 
 y "thats us"
 
 show lion fuckass
 
 p "Hehe. Yeah"
-"They look so warm there in the sun"
+
+nvl clear
+
+p "They look so warm there in the sun"
 "I think ill step out a little after all"
 
 show lion happy
@@ -1135,80 +1132,81 @@ return
 
 label pv:
 
-
-
 """\nMy hand was already on the doorknob when I noticed the sound.
 
 I opened it up to find –
 
-\"Hey.\"
+\n\"Hey.\"
 
-I blinked a little more forcefully than usual.
+\nI blinked a little more forcefully than usual. Was my mind playing tricks on me? It couldn’t have been more than an hour since I sent the message.
 
-Was my mind playing tricks on me? It couldn’t have been more than an hour since I sent the message.
+\n\"What are you doing here?\"
 
-\"What are you doing here?\"
+\nHer stance was nonchalant, like she should ask me the same thing. This was {i}my{/i} territory, though. Irritation was already at the tips of my fingers.
 
-Her stance was nonchalant, like she should ask me the same thing.
+\n\"You’re really gonna make me stand here in the doorway?\"
 
-This was {i}my{/i} territory, though. Irritation was already at the tips of my fingers.
-
-\"You’re really gonna make me stand here in the doorway?\"
-
-As much as I hated the idea of having her in the apartment, I didn’t want the neighbors overhearing us either. I stood aside.
+\nAs much as I hated the idea of having her in the apartment, I didn’t want the neighbors overhearing us either. I stood aside.
 
 She waltzed in, outdoor shoes trampling on old carpet.
 
-She was looking the place up and down as if making sure everything was in the place she left it. Beyond us, the curtains were whipping in the wind.
+She was looking the place up and down as if making sure everything was in the place she left it. Beyond us, the curtains were whipping in the wind. I was suddenly aware of the smell.
 
-I was suddenly aware of the smell.
+This was fine. Great, really. I was ready to make do with a written apology, but now that I saw her face, the anger I’d forgotten about was starting to come back to me."""
 
-This was fine. Great, really.
+nvl clear
 
-I was ready to make do with a written apology, but now that I saw her face, the anger I’d forgotten about was starting to come back to me.
-
-{i}Audrey. I thought we were friends.{/i}
+"""\n{i}Audrey. I thought we were friends.{/i}
 
 Just the first in a long line of disappointments.
 
 She turned back towards me.
 
-\"You know, I really don’t get you. You should be old enough to drink by now.
-
-Wouldn’t that be a better use of your time? If not a better use of your {i}brain{/i}.
+\n\"You know, I really don’t get you. You should be old enough to drink by now. Wouldn’t that be a better use of your time? If not a better use of your {i}brain{/i}.
 
 Why are you so hung up on me?\"
 
-She said it like we were only talking about an embarrassing crush. Did she even read my message?
+\nShe said it like we were only talking about an embarrassing crush. Did she even read my message?
 
-\"You’re the one who can’t seem to leave me alone.\"
+\n\"You’re the one who can’t seem to leave me alone.\""""
 
-It was a process that was put into motion a long time ago.
+show black
 
-\"Hahaha, WHAT?\"
+"\nIt was a process that was put into motion a long time ago."
 
-Complete and utter isolation. Blinding my senses until I’m too afraid to take a single step. Breaking down my world piece by piece. Why else would she treat Iris that way?
+hide black
 
-\"I told you. If you don’t want to apologize, then just... stop. I don’t want to see you again.\"
+"\n\"Hahaha, WHAT?\""
 
-Maybe it was decided before I was even born.
+show black
 
-\"I’m not in your class because I fucking want to be!\"
+"\nComplete and utter isolation. Blinding my senses until I’m too afraid to take a single step. Breaking down my world piece by piece. Why else would she treat Iris that way?"
 
-She took a step towards me.
+hide black
 
-I knew her type: she was always demanding for something to be fixed.
+"\n\"I told you. If you don’t want to apologize, then just... stop. I don’t want to see you again.\""
 
-In her eyes, I must’ve been an intolerable stain. Thanks to that, any aggression was justified.
+show black
 
-\"What do you expect me to do? Just disappear?\"
+"\nMaybe it was decided before I was even born."
 
-\"...\"
+nvl clear
 
-I gave her a slow nod.
+hide black
 
-I’d be lying if I said I never considered it before.
-In my mind’s eye, the playground, the classroom, the convenience store and the street without Audrey in it were all so clear. One less voice in the choir, but that was all.
+"""\n\"I’m not in your class because I fucking want to be!\"
+
+\nShe took a step towards me.
+
+I knew her type: she was always demanding for something to be fixed. In her eyes, I must’ve been an intolerable stain. Thanks to that, any aggression was justified.
+
+\n\"What do you expect me to do? Just disappear?\"
+
+\n\"...\"
+
+\nI gave her a slow nod.
+
+I’d be lying if I said I never considered it before. In my mind’s eye, the playground, the classroom, the convenience store and the street without Audrey in it were all so clear. One less voice in the choir, but that was all.
 
 If the world ended today and I was asked to recreate it, I’d do it exactly so.
 
@@ -1216,45 +1214,39 @@ Her expression contorted with rage. It felt like I could see right up her nose i
 
 Since when could she make such a horrible face?
 
-\"The world doesn’t revolve around you, asshole!\"
+\n\"The world doesn’t revolve around you, asshole!\""""
 
-It happened before I could even register it.
+nvl clear
+
+"""\nIt happened before I could even register it.
 
 One moment, she was standing before me, and then she leapt for my neck, eyes lit with sparks.
 
-{i}\"i think even a no has meaning{/i}
+{i}\n\"i think even a no has meaning{/i}
 
 {i}sometimes i don’t even realize it’s an option until i hear someone else say it\"{/i}
 
-I acted on pure reflex. I felt my back connect to the door and my hands grab hold of her wrists and push –
+\nI acted on pure reflex. I felt my back connect to the door and my hands grab hold of her wrists and push –
 
 She hit the ground with a thud.
 
-Seeing her limbs twisted around her should’ve made me feel something.
-
-Instead, all I could think was {i}she wanted this to be me{/i}.
+Seeing her limbs twisted around her should’ve made me feel something. Instead, all I could think was {i}she wanted this to be me{/i}.
 
 The air suddenly felt too cold on my skin; I realized I was drenched in sweat. I pulled my phone from my pocket.
 
-I did it
+\nLION: I did it
 
 I thought i would have to ask her to leave us alone
 
 But i just did it
 
-The pinch of her brows was quickly coming undone.
+\nThe pinch of her brows was quickly coming undone. She must’ve lost consciousness on her way down. It made me think of one of grandma’s stories."""
 
-She must’ve lost consciousness on her way down.
+nvl clear
 
-It made me think of one of grandma’s stories. 
+"""\nIt was a bright, early autumn day.
 
-It was a bright, early autumn day.
-
-She was on her way to the post office when the lady walking in front of her tripped and fell, never to get up again.
-
-{i}She landed in the most unfortunate way,{/i} she said. It was over in an instant.
-
-I wasn’t allowed to leave the house for a week afterwards; she couldn’t relax unless she could see me.
+She was on her way to the post office when the lady walking in front of her tripped and fell, never to get up again. {i}She landed in the most unfortunate way,{/i} she said. It was over in an instant. I wasn’t allowed to leave the house for a week afterwards; she couldn’t relax unless she could see me.
 
 Did Audrey hurt herself on the threshold?
 
@@ -1262,17 +1254,11 @@ I looked at her again.
 
 There was no blood, but I couldn’t hear her breathing over the sound of the curtains.
 
-She looked more like the girl I knew now: the one who barely came up to the cabinet next to her.
-
-Dirty fingers, garish shirts, polkadots. Castles in the sand. It all felt like a lifetime ago.
-
-What kind of face was I making? I couldn’t tell.
+She looked more like the girl I knew now: the one who barely came up to the cabinet next to her. Dirty fingers, garish shirts, polkadots. Castles in the sand. It all felt like a lifetime ago. What kind of face was I making? I couldn’t tell.
 
 I crouched down beside her.
 
-Out of the corner of my eye, I saw a crow land on the balcony railing.
-
-Audrey’s skin was flushed with sunlight; her collarbone cast soft shadows below. She looked like she could’ve been ill.
+Out of the corner of my eye, I saw a crow land on the balcony railing. Audrey’s skin was flushed with sunlight; her collarbone cast soft shadows below. She looked like she could’ve been ill.
 
 I didn’t hear anything except the ringing in my ears.
 
@@ -1460,14 +1446,14 @@ show rex judging
 "can you fucking imagine. we are NOT that close"
 
 play sound "street2.mp3"
+nvl clear
 
-"thats like showing your bare ass to a houseguest"
+r "thats like showing your bare ass to a houseguest"
 
 show rex mocking
 
 "of your parents"
 
-nvl clear
 
 show rex neutral
 
@@ -1478,6 +1464,8 @@ r "the whole thing made my skin crawl"
 "whatever i can still play it off like shes the reason i looked at yaoi"
 "dont wanna reveal my power level too early"
 "wait do people even say that anymore"
+
+nvl clear
 
 r "maybe the bracelet isnt the problem"
 
@@ -1630,7 +1618,7 @@ show rex judging
 "otherwise this is just writing alone"
 "which i already knew i could do"
 
-y "How about a story where we kill eachother"
+y "How about a story where we kill eachother?"
 
 show rex mocking
 
@@ -1656,7 +1644,7 @@ show rex neutral
 "well"
 "i am happy to entertain your take on things"
 
-y "That's it, Audrey"
+y "That's it, Audrey."
 
 r "oh wow"
 "you can leave the literature nobel at the door"
@@ -1675,9 +1663,11 @@ show rex neutral
 
 "lets go with rex for now"
 "and maybe we can work our way up to it or something"
-"ok go on"
 
 nvl clear
+
+r "ok go on"
+
 
 y "{i}“The hunting knife gleamed once in the low light. That was the only warning Jiro gave before plunging it deep in the other man’s forearm. His face went slack with kindness, like a statue of the Virgin Mary.{/i} I can’t wait tonight, {i}he breathed. His gaze was fixed on his own scarred chest as if expecting something.”{/i}"
 
@@ -1700,13 +1690,14 @@ show rex judging
 "does the g in gpt stand for goldfish?????"
 "i just cracked a nail typing that out. oops"
 
-y "It stands for generative"
+y "It stands for generative."
+
+nvl clear
 
 r "buddy"
 "lets generate you some sense not to talk back"
 
 stop music fadeout 1
-nvl clear
 
 show rex bored
 
@@ -1717,7 +1708,7 @@ r "alright fine ill humor you a little"
 play music rhapsody fadein 1.5
 show rex neutral
 
-r "{i}“Sparks flew inside his vision. He grunted, shifting his weight so as to hold the brunt of it with his other side. He could feel himself press the breath out of Jiro’s body.{/i} Cut it out, {i}he hissed, half-speaking to himself. Punishing him would be giving him exactly what he wanted.”{/i}"
+"{i}“Sparks flew inside his vision. He grunted, shifting his weight so as to hold the brunt of it with his other side. He could feel himself press the breath out of Jiro’s body.{/i} Cut it out, {i}he hissed, half-speaking to himself. Punishing him would be giving him exactly what he wanted.”{/i}"
 
 y "{i}“Jiro pulled the knife from his arm with shaking hands. Its blade transfixed him; he spun the tip towards himself, angled it at his chest. The skin there was pulled taut and pale, like a white canvas. It seemed terribly lonely.”{/i}"
 
@@ -1834,9 +1825,10 @@ show rex neutral
 
 "so why not give them a happy ending on their own terms"
 
+nvl clear
+
 r "{i}“He continued to lay kisses on him, from neck, to cheek, to forehead. Jiro’s breaths came shallow beneath him. His heart sank when he caught sight of his expression: vague and distant, like he was just waiting for an ache to pass. Strength drained out of him. He rolled over to his side, bleeding arm blanketed over the other man.”{/i}"
 
-nvl clear
 
 r "except"
 
@@ -1852,16 +1844,14 @@ r "i cant imagine him being convinced"
 "and free in spirit"
 "life owes him more than that"
 
+nvl clear
+
 r "“The hell do you want me to do...? {i}His hand snaked up, up his lover’s body, stopping only at his tender neck.”{/i}"
 
 show rex neutral
 
-r "..."
-"but he might just do it anyway"
-
-nvl clear
-
-r "the way youd fling an alarm clock into the wall"
+r "but he might just do it anyway"
+"the way youd fling an alarm clock into the wall"
 "before you even realize it"
 "the thing that kept you moving day after day"
 "even when you resented it for it"
@@ -1878,15 +1868,14 @@ y "Why not ask?"
 r "you say something"
 "youre her double"
 
+nvl clear
+
 y "I'm sure she's having a day like any other"
 
 show rex mocking
 
 r "thatd sting a bit after our last talk"
-
-nvl clear
-
-r "oh well"
+"oh well"
 "she must understand"
 "if i seem harsh"
 "its only because i know she can do better"
@@ -1913,17 +1902,17 @@ r "thats different"
 show rex neutral
 
 "yet"
-"as usual i have deployed my normalsona"
+
+nvl clear
+
+r "as usual i have deployed my normalsona"
 
 show rex bored
 
 "she barely even knows me"
 "thats why i wanna try rping with her"
 "theres something there that youd never touch if you just talked to eachother"
-
-nvl clear
-
-r "everyone has their defenses up"
+"everyone has their defenses up"
 "its easy to act like the surface is the whole thing..."
 
 show rex thinking
@@ -1942,19 +1931,19 @@ show rex neutral
 "but who knows what that even is"
 "all i know is that it was inevitable that id end up there"
 
+nvl clear
 show rex mocking
 
 r "so yeah a psychologist could have a field day with my stuff"
 "not that ive tried"
 "let me know if you wanna throw your hat in the ring lmao"
 
-nvl clear
 
 menu(nvl=True):
-    "You're fine":
+    "1. You're fine":
         jump rdespair1
 
-    "You're special":
+    "2. You're special":
         jump rviolence1
 return
 
@@ -1964,8 +1953,8 @@ label rdespair1:
 
     show rex thinking
 
-    y "It's okay"
-    "Everyone has these urges, more or less"
+    y "It's okay."
+    "Everyone has these urges, more or less."
     
     show rex judging
 
@@ -2020,13 +2009,11 @@ show rex thinking
 
 "and this picture we took at the bakery"
 
-nvl clear
-
 menu(nvl=True):
-    "About her":
+    "1. About her":
         jump rviolence2
 
-    "About you":
+    "2. About you":
         jump rdespair2
 return
 
@@ -2034,14 +2021,14 @@ label rviolence2:
 
     nvl clear
 
-    y "That's a unique outfit"
+    y "That's a unique outfit."
     
-    show rex mocking -frustrated
+    show rex mocking
 
     r "“unique” lol"
     "now you understand what i see in her"
     
-    y "She seems more interested in her croissant than in you"
+    y "She seems more interested in her croissant than in you."
     
     r "hey"
 
@@ -2057,14 +2044,14 @@ label rdespair2:
 
     nvl clear
 
-    y "You look uncomfortable"
+    y "You look uncomfortable."
     
     show rex neutral
 
     r "what"
     "no i dont"
 
-    y "There’s tension around your eyes"
+    y "There’s tension around your eyes."
     
     r "come on"
 
@@ -2093,7 +2080,7 @@ show rex mocking
 
 "the most esoteric spam mail of my life LMFAO?"
 
-y "What is it"
+y "What is it?"
 
 show rex thinking
 
@@ -2123,7 +2110,7 @@ show rex judging
 "run a search will you"
 
 y "..."
-"No hits found"
+"No hits found."
 
 r "cant say i trust you much"
 "but lets go with that for now"
@@ -2137,11 +2124,11 @@ r "still"
 show rex mocking
 
 "bro you dont even know meeee you probably got my info from an illegal forum somewhere"
-"you think they accidentally sent me their novel? lol"
 
 nvl clear
 
-r "so heavy handed"
+r "you think they accidentally sent me their novel? lol"
+"so heavy handed"
 "i never thought id get to be the root of all evil in someones deranged manifesto"
 
 r "but i must say"
@@ -2172,7 +2159,7 @@ r "this is from..."
 "on the way back from the library"
 "everything was going well"
 
-show rex frustrated -judging
+show rex frustrated
 
 "and then i raised my voice a little more than usual"
 
@@ -2198,8 +2185,7 @@ nvl clear
 
 r "its weird though"
 "i get on well with most people i know"
-"sure were not close"
-"but why would someone wanna send me this"
+"why would someone wanna send me this"
 
 r "no its not even that"
 "this is"
@@ -2217,10 +2203,10 @@ show rex judging
 "talk to anyone like this?"
 
 menu(nvl=True):
-    "Get on well?":
+    "1. Get on well?":
         jump rdespair3
 
-    "No way of knowing":
+    "2. No way of knowing":
         jump rviolence3
 return
 
