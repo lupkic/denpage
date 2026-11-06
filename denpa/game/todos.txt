@@ -1,5 +1,4 @@
-- ctc
+-ctc
 - colorsss
 - main menu music (options.rpy)
 - transition when you press play on main menu
-- 1V fake chat nametag
