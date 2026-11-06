@@ -20,29 +20,29 @@ screen game_menu(title):
 
         if main_menu:
 
-            textbutton _("Start") action Start()
+            textbutton _("START") action Start()
 
         else:
 
 #            textbutton _("History") action ShowMenu("history")
 
-            textbutton _("Save") action ShowMenu("save")
+            textbutton _("SAVE") action ShowMenu("save")
 
-        textbutton _("Load") action ShowMenu("load")
+        textbutton _("LOAD") action ShowMenu("load")
 
-        textbutton _("Options") action ShowMenu("preferences")
+        textbutton _("OPTIONS") action ShowMenu("preferences")
 
         if _in_replay:
 
-            textbutton _("End Replay") action EndReplay(confirm=True)
+            textbutton _("END REPLAY") action EndReplay(confirm=True)
 
         elif not main_menu:
 
-            textbutton _("Title") action MainMenu()
+            textbutton _("TITLE") action MainMenu()
 
 #        textbutton _("About") action ShowMenu("about")
 
-        textbutton _("Back") action Return()
+        textbutton _("BACK") action Return()
 
 #        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
@@ -53,7 +53,7 @@ screen game_menu(title):
 
             ## The quit button is banned on iOS and
             ## unnecessary on Android and Web.
-            textbutton _("Quit") action Quit(confirm=not main_menu)
+            textbutton _("QUIT") action Quit(confirm=not main_menu)
 
 #    textbutton _("Return"):
 #        style "return_button"

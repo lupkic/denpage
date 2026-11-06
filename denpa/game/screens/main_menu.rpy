@@ -26,7 +26,7 @@ screen main_menu():
         yoffset 40
         spacing 35
 
-        textbutton _("PLAY") action Start()
+        textbutton _("START") action Start()
 
         textbutton _("LOAD") action ShowMenu("load")
 

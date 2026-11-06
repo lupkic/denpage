@@ -1,0 +1,8 @@
+Q:
+1. any bugs?
+2. does the plot make sense. anything that needs clarifying
+3. any typos/grammar issues?
+4. is the choice indicator clear
+5. is the text readable, too dense, too small, bad font etc
+6. does the sound design work? does it need more music?
+
