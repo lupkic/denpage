@@ -5,4 +5,5 @@ Q:
 4. is the choice indicator clear
 5. is the text readable, too dense, too small, bad font etc
 6. does the sound design work? does it need more music?
+7. point indicators yes/no/sometimes? particularly for the final choice for pygmalion
 
