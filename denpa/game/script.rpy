@@ -347,6 +347,8 @@ show lion right
 
 "Just to let me know youre there"
 
+y "{image=dotdot.png}"
+
 play sound "barking2.mp3"
 show lion neutral
 
@@ -366,15 +368,15 @@ show lion neutral
 
 "I can tell she wants to grind it down and swallow it"
 
+nvl clear
 show lion hiding
 
-"Thats just the kind of person she is"
+p "Thats just the kind of person she is"
 "Because she has nothing of her own"
 
-nvl clear
 show lion happy
 
-p "Maybe you pity her. Youre a good person after all"
+"Maybe you pity her. Youre a good person after all"
 "But it wont end well"
 
 show lion neutral
@@ -401,11 +403,11 @@ show lion low
 
 p "I checked the door"
 "It was my grocery delivery"
-"Forgot i did that"
 
 nvl clear
 
-p "There is no milk... They didnt even have my second choice apparently"
+p "Forgot i did that"
+"There is no milk... They didnt even have my second choice apparently"
 "Fuck my life"
 "Last time they did this with my shower gel"
 
@@ -1094,24 +1096,59 @@ p "Look"
 "Two of them"
 
 
+menu(nvl=True):
+    "1. how sweet!":
+        jump pviolence3
 
-y "thats us"
+    "2. interesting":
+        jump pdespair3
+
+return
+
+label pviolence3:
+
+nvl clear
+
+y "that's us"
 
 show lion fuckass
 
 p "Hehe. Yeah"
+"They look so warm there in the sun"
+"Makes me want to protect them"
+
+"\n(VIOLENCE +1)"
+
+$ violence+=1
+jump pcont3
+
+label pdespair3:
 
 nvl clear
 
-p "They look so warm there in the sun"
-"I think ill step out a little after all"
+show lion right
+y "what's with you and pigeons?"
+
+nvl clear
+
+y "{image=dotdot.png}"
+"that's us"
+p "I thought so too"
+
+"\n(DESPAIR +1)"
+
+$ despair+=1
+jump pcont3
+
+label pcont3:
+
+p "I think ill step out a little after all"
 
 show lion happy
 
 "I have my phone with me"
 "So i should see if she replies anyway"
 
-nvl clear
 stop music fadeout 1
 
 "violence = [violence]\n despair = [despair]"
@@ -1122,10 +1159,10 @@ $ nvl_mode = "ed"
 $ gui.xanchor = 400
 $ gui.rebuild()
 
-if violence==2:
+if violence>=2:
     jump pv
 
-if despair==2:
+if despair>=2:
     jump pd
 
 nvl clear
@@ -1250,11 +1287,11 @@ nvl clear
 
 """\nIt was a bright, early autumn day.
 
-She was on her way to the post office when the lady walking in front of her tripped and fell, never to get up again. {i}She landed in the most unfortunate way,{/i} she said. It was over in an instant. I wasn’t allowed to leave the house for a week afterwards; she couldn’t relax unless she could see me.
+\nShe was on her way to the post office when the lady walking in front of her tripped and fell, never to get up again. {i}She landed in the most unfortunate way,{/i} she said. It was over in an instant. I wasn’t allowed to leave the house for a week afterwards; she couldn’t relax unless she could see me.
 
-Did Audrey hurt herself on the threshold?
+\nDid Audrey hurt herself on the threshold?
 
-I looked at her again.
+\nI looked at her again.
 
 There was no blood, but I couldn’t hear her breathing over the sound of the curtains.
 
@@ -1266,102 +1303,143 @@ show ed pyg violence alt with dissolve
 
 """Out of the corner of my eye, I saw a crow land on the balcony railing. Audrey’s skin was flushed with sunlight; her collarbone cast soft shadows below. She looked like she could’ve been ill.
 
-I didn’t hear anything except the ringing in my ears.
+\nI didn’t hear anything except the ringing in my ears.
 
-\n1V: pygmalion, triumphant"""
+\n\n1V: PYGMALION, TRIUMPHANT"""
 return
 
 #"~end~?????"
 
 label pd:
-"1D: all eyes on you"
+"""\nHis hand was already on the doorknob when he noticed the sound.
 
-"His hand was already on the doorknob when he noticed the sound."
+That was odd. He wasn’t expecting another delivery.
 
-"That was odd. He wasn’t expecting another delivery."
-"He fixed his eye on the peephole –"
+He fixed his eye on the peephole –
 
-d "Pyg? You in there?"
+\n\"Pyg? You in there?\"
 
-"His heart fell in an instant."
-"A thousand doubts pricked at his skin; he fought the urge to scratch at them, to pull at his hair. What was she doing here?"
-"There were five to ten responses swirling in his head, depending on her next move. All assuming she would write him back, desperate to save her good image. Some were gracious. Some pushed his luck –"
+\nHis heart fell in an instant.
 
-d "I got your message. That must’ve taken a while to write, huh?"
+A thousand doubts pricked at his skin; he fought the urge to scratch at them, to pull at his hair. What was she doing here?
 
-"It was more like possession. He was surprised by how the words kept flowing once he started. The turns of phrase he’d mastered in the dark of his bedroom all converged on one point."
-"Destroy her."
-"If not fundamentally, then physically. If not physically, then mentally. If not mentally, then socially. See, she wasn’t the only one who could take away someone’s place to belong."
-"He had felt invincible,"
-"but that was then."
-"Now the girl on his doorstep looked invincible, too."
+There were five to ten responses swirling in his head, depending on her next move. All assuming she would write him back, desperate to save her good image. Some were gracious. Some pushed his luck –
 
-"Audrey, not a hair out of place. Weren’t there supposed to be consequences?"
+\n\"I got your message. That must’ve taken a while to write, huh?\"
 
-d "All that bullshit, I mean."
+\nIt was more like possession.
 
-"His body was welded to the door. When she got closer to rap out a knock, it went through him like a foreign heartbeat."
-"Shame or punishment: those are the only things capable of keeping people in line. He remembered reading something like that once. If she wouldn’t learn from one, he would show her the other. She clearly felt no shame – that left him with only one option."
-"Audrey lowered her voice."
+He was surprised by how the words kept flowing once he started.
+The turns of phrase he’d mastered in the dark of his bedroom all converged on one point."""
 
-d "You don’t think anybody’s gonna ask?"
+nvl clear
 
-"For a moment, their eyes met. He sucked in a breath; was the peephole not one-way?"
+show black
 
-d "Hey, where’d you get that picture? How long were you following us?{p}When you say she lay there for hours, you don’t mean..."
+"""\nDestroy her.
 
-"His eyes went to the corners of the room, the birds all standing in a line, the red afternoon blaring like a searchlight through the balcony window. Why? Why did he suddenly feel that he was surrounded by enemies?"
-"Even the phone in his pocket seemed to burn against his skin."
+If not fundamentally, then physically. If not physically, then mentally. If not mentally, then socially. See, she wasn’t the only one who could take away someone’s place to belong.
 
-d "...stop..."
+He had felt invincible,"""
 
-"The voice that came out of him could hardly even be called a whisper. He pressed his back to the door as if he could hold it closed. She was banging on it without restraint now."
-"He needed to call for help. He needed..."
+hide black
 
-d "I thought you wanted to hear my response!"
+"""but that was then.
 
-"No, no, no. He couldn’t let her hear this!"
-"If he disappointed her now, he really would have no-one left to turn to!"
-"SHAME OR PUNISHMENT."
-"Which one was he more afraid of?"
+Now the girl on his doorstep looked invincible, too.
 
-d "You know that I’m barely even in that photo, right? Post it! Spread it all over the internet! I’m sure she’d love that."
+Audrey, not a hair out of place. Weren’t there supposed to be consequences?
 
-d "—-------!!!"
+\n\"All that bullshit, I mean.\"
 
-"Just where was her strength coming from?"
-"The fact it was locked seemed entirely irrelevant. Every bang on the door rattled the walls; wind whistled through a gap in the frame. It was only a matter of time until it all came crashing down. He scrambled to put some futile distance between the two of them."
+\nHis body was welded to the door. When she got closer to rap out a knock, it went through him like a foreign heartbeat.
 
-d "But like, you watched her lay there and didn’t do anything? And you wanna talk about what’s wrong with ME?"
+Shame or punishment: those are the only things capable of keeping people in line. He remembered reading something like that once. If she wouldn’t learn from one, he would show her the other. She clearly felt no shame – that left him with only one option.
+
+Audrey lowered her voice.
+
+\n\"You don’t think anybody’s gonna ask?\"
+
+\nFor a moment, their eyes met. He sucked in a breath; was the peephole not one-way?"""
+
+nvl clear
+
+"""\n\"Hey, where’d you get that picture? How long were you following us?{p}When you say she lay there for hours, you don’t mean...\"
+
+\nHis eyes went to the corners of the room, the birds all standing in a line, the red afternoon blaring like a searchlight through the balcony window.
+
+Why? Why did he suddenly feel that he was surrounded by enemies?
+
+Even the phone in his pocket seemed to burn against his skin.
+
+\n\"...stop...\"
+
+\nThe voice that came out of him could hardly even be called a whisper. He pressed his back to the door as if he could hold it closed. She was banging on it without restraint now.
+
+He needed to call for help. He needed...
+
+\n\"I thought you wanted to hear my response!\"
+
+\nNo, no, no. He couldn’t let Iris hear this!
+
+If he disappointed her now, he really would have no-one left to turn to!
+
+{size=+10}SHAME OR PUNISHMENT.{/size}
+
+Which one was he more afraid of?"""
+
+nvl clear
+
+"""\n\"You know that I’m barely even in that photo, right? Post it! Spread it all over the internet! I’m sure she’d love that.\"
+
+\n\"—--—-—-!!!\"
+
+\nJust where was her strength coming from?
+
+The fact it was locked seemed entirely irrelevant. Every bang on the door rattled the walls; wind whistled through a gap in the frame. It was only a matter of time until it all came crashing down. He scrambled to put some futile distance between the two of them."""
+
+"\n\"But like, you watched her lay there and didn’t do anything? And you wanna talk about what’s wrong with ME?\""
 
 show ed pyg despair alt with dissolve
 
-"When he crossed the threshold into the living room, the balcony door was open."
+"\nWhen he crossed the threshold into the living room, the balcony door was open."
 
-d "You think YOU’VE got a right to judge anybody?"
+"\n\"You think YOU’VE got a right to judge anybody?\""
 
-
-
-"The world outside his window was silent. He wanted to call for help, but nothing in him moved. He leaned over the railing limply."
-
-"A tepid wind caressed his face."
-"It was a familiar feeling."
-"The people below came and went; his hand that reached out slid off of them without touching anything."
+"\nThe world outside his window was silent. He wanted to call for help, but nothing in him moved. He leaned over the railing limply."
 
 show ed pyg despair with dissolve
+nvl clear
 
-"Somewhere,"
-"several stories down,"
-"teardrops were falling."
-"There was nothing he could do. That was all he knew with any certainty."
+"""\nA tepid wind caressed his face.
 
-"But down there, on that road that ran from the playground to the convenience store, the one that used to be hemmed by cherry trees when he was little, stopping only for a moment,"
-"another pair of eyes met his."
+It was a familiar feeling.
 
-"It took his breath away."
-"Maybe all that time he’d spent wishing to be saved wasn’t wasted after all. No, those words couldn’t just disappear in the wind! Trembling, he willed his hand to reach further –"
+The people below came and went; his hand that reached out slid off of them without touching anything."""
 
-show ed pyg despair alt with dissolve
+
+"""\nSomewhere,
+
+several stories down,
+
+teardrops were falling.
+
+There was nothing he could do. That was all he knew with any certainty.
+
+\nBut down there, on that road that ran from the playground to the convenience store, the one that used to be hemmed by cherry trees when he was little,
+
+another pair of eyes met his.
+
+\nIt took his breath away.
+
+Maybe all that time he’d spent wishing to be saved wasn’t wasted after all. No, those words couldn’t just disappear in the wind! Trembling, he willed his hand to reach further –"""
+
+show ed pyg despair alt
+with dissolve
+with vpunch
+
+"\n\n1D: ALL EYES ON YOU"
+
 #"(BANG)"
 #"~end~"
 return
@@ -2391,77 +2469,242 @@ label rv:
 
 nvl clear
 
+"""\nWe were friends, once upon a time.
 
-"2V: old friend"
+No, that’s not quite it. We each were the one person the other could talk to. The girls in my class treated me like a foreign object. I couldn’t remember why, or when it started.
+
+Always together, like peas in a pod.
+
+No, it only felt that way to me. We were just twelve, but everyone saw me as his future bride. It was like someone had locked the door behind me while I wasn’t looking.
+
+
+By their logic, it made perfect sense: you don’t want to think your kid is a bully, or lets the bullying happen. One outcast would stick out like a sore thumb, but if you paired them off–
+
+I didn’t miss those days, but maybe he did.
+
+\n\"Pyg? You in there?\"
+
+\nThe light behind me blinked weakly. He probably couldn’t make out my face in the peephole if he tried. 
+
+Just as I was about to knock, the door slipped out from under my hand.
+
+His face was buried in his phone; it took until he bumped into me to notice me at all.
+
+\n\"A–drey!!\"
+
+\nHis voice went out somewhere in the middle; he must’ve thought I didn’t notice, because he moved on without attempting a recovery. A smart maneuver. 
+
+Unfortunately, his posture was shrinking in real time."""
+
+nvl clear
+
+"""\n\"Can I ask for your help with something? I got this weird e-mail...\"
+
+\nI stepped closer – he stumbled backwards. Relief washed over me; the whole world could turn upside down and he would still be exactly as I knew. I let myself into the apartment.
+
+Dust danced around us in the late light.
+
+Spotting the heavy coats on the rack, I almost asked where granny was before remembering. She was gone, the large standing mirror was gone, the fake flowers were gone. He seemed intent on turning the place into a crypt.
+
+\n\"Doesn’t this picture look sorta like Iris?\"
+
+\nHe was pressed up against a dresser. Did he hate having me in his space that badly?
+
+\n\"Isn’t it awful? Like fainting in public wasn’t bad enough... They’re even going to spread this around.\"
+
+\n\"...’s proof of what you’re really like. D-don’t pretend you care about how she feels now.\"
+
+\nSo he found his voice. Good. I almost thought the mail was a fluke.
+
+I put on my best smile.
+
+\n\"You think this is gonna make her like you?\""""
+
+nvl clear
+
+"""\nHe sucked in a breath.
+
+\n\"T-that has nothing to do with it...{p}
+I’m protecting her, like I should! Before she comes crashing down to Earth...\"
+
+\nHuh?
+
+\n\"Those thoughtless people who only feel safe in a crowd... they want to drag us down even if it kills us! They don’t value their own freedom because they’ve never known what to do with it. Impulse and reflex, that’s all they have!{p}But you’re {i}worse{/i}.\"
+
+\nHis train of thought was quickly getting away from me. Crash down to Earth? I thought she’d hit the ground a while ago. An anxious pressure settled at the back of my head.
+
+His fists were trembling.
+
+\n\"Why does it matter to you what we do? I gave up so much already, but you’re still coming after me... If you want me to die, just come out and say it!\"
+
+\nAgainst all reason, what my brain came up with was – had Iris complained about me?
+No, there was no way. They’d never even spoken to eachother. If they had, I would’ve known about it. Or would I?"""
+
+nvl clear
+with vpunch
+
+"""\nMy vision shook; I looked down to find that he’d seized both of my arms. Beneath the mess of hair, a tearful eye was staring straight at me.
+
+\n\"Why are you torturing me?!\"
+
+\nA weak-willed boy tugging on my sleeve: that’s who he was supposed to be.
+
+Poor Pygmalion. With parents cruel enough to name him that, he never had a chance.
+
+No, that couldn’t be true. All he had to do was throw me under first. It wasn’t my fault it never occurred to him.
+
+I glanced at the door behind me. Blood pounded in my head; I could barely make out my ragged breathing over it. Like a cornered animal. {i}How disgraceful.{/i}
+
+When I tried to untangle myself, his grip on my arms only tightened.
+
+\n\"No! You have to listen!\"
+
+\n\"...!\"
+
+\nJust who did he think he was, threatening me?
+
+This man, who only came up to my nose?
+
+He was clearly out of his mind. If he didn’t let go of me, I’d have to make him."""
+
+nvl clear
+
+"""\nPulling away didn’t work. Instead, I shifted my weight to my back foot and slammed him into the dresser. The impact sent hats and other garbage raining down on us.
+
+\n\"Eek!\"
+
+\nWithout me to hold on to, Pygmalion stumbled and fell backwards onto his ass.
+
+See, I knew he was all talk.
+
+I knew, but my heart wouldn’t stop hammering in my chest.
+
+I crouched down to his level. His head was hanging limply; he wasn’t even trying to move.
+
+This was why these things happened to him. No matter how badly he was hurt, he would just lay there and wait for it to be over.
+
+\nAny second now, and he would look up at me.
+
+\nHe would look up at me.
+
+\n\n2V: OLD FRIEND"""
 
 return
 
 label rd:
 
+scene bg middle
 nvl clear
 
-"2D: the city at dusk"
+"""\nThe low-flying sun seared her eyes.
 
-"The low-flying sun seared her eyes."
-"All around her, people were walking home from work or from school, their cheerful sounds ringing in the afternoon. Lights began to blink on in the apartments nearby, and the city breathed a sigh of relief. Even the shadows stretched lazily across the road. Her urgency seemed out of place in such a scene."
+\nAll around her, people were walking home from work or from school, their cheerful sounds ringing in the afternoon. Lights began to blink on in the apartments nearby, and the city breathed a sigh of relief. Even the shadows stretched lazily across the road. 
 
-"It was too measured to be called a run, but her knees creaked with effort anyway. She was fighting to keep her breathing even as she cut through the crowd. At some point, she had decided she hated each of them individually. Mostly, she wanted to be far, far away from here and thinking about nobody at all."
-"Tidy pairs passed by her, one after another. Their laughter grated on her nerves; her head felt fit to burst."
+Her urgency seemed out of place in such a scene.
 
-"The faster she walked, the more the street seemed to stretch endlessly before her. A procession of shops she’d never heard of, all of which looked like they’d closed ten years ago. Storefronts teeming with statues of obscure saints. Shutters, shutters, {i}shutters{/i}. It was only delaying the inevitable. She kept going. There was no way she’d get lost in her hometown."
+It was too measured to be called a run, but her knees creaked with effort anyway. She was fighting to keep her breathing even as she cut through the crowd. 
 
-"She passed a man sitting blearily on the sidewalk. His beer bottle had rolled away without him noticing; she gave him and his trash a wide berth. At least the crowd was beginning to thin."
+At some point, she had decided she hated each of them individually. 
 
-"The girl had left the house in a hurry. But why?"
-"She was in no state to answer. It was a good thing she’d walked this road hundreds of times, or else there would be no telling where she might end up. Tears pooled at the corners of her eyes. She looked, but didn’t see."
-"That image was the only thing on her mind."
-"Opening it, she felt as if her skin had been turned inside out. The urge to escape overtook her. She’d burst through the entryway, coatrack and winter boots tumbling behind her."
+Mostly, she wanted to be far, far away from here and thinking about nobody at all.
+Tidy pairs passed by her, one after another. 
 
-"In the sequence of her days"
-"elegant in their simplicity, if by no other virtue"
-"something had began to rot."
+Their laughter grated on her nerves; her head felt fit to burst.
 
-"Yes, that must be why–"
-"On that day, at that moment, she said those things she’d never meant for anyone to hear."
-"It should’ve been clumsy, like when she was laughed at for how she’d read ‘colonel’. Curses fit ill in her mouth. {i}I just can’t take you seriously with that voice.{/i}"
-"Instead, it came naturally."
+\nThe faster she walked, the more the street seemed to stretch endlessly before her. A procession of shops she’d never heard of, all of which looked like they’d closed ten years ago. Storefronts teeming with statues of obscure saints. Shutters, shutters, {i}shutters{/i}. 
 
-"Naturally?"
-"Even though she wasn’t that sort of person at all?"
+It was only delaying the inevitable. 
 
-"A flash of red caught her eye. Up ahead, a mother and child were walking down the street. They seemed to be absorbed in conversation. Her steps slowed. The kid almost reached her mother’s shoulders; they were holding hands at an awkward angle."
-"Didn’t Iris have a cardigan just like that?"
+\nShe kept going. There was no way she’d get lost in her hometown."""
 
-"They looked comical, like two fly agarics come to life. The kid’s hair had clearly never been cut for as long as she’d been alive. When the wind picked up, it sent it straight into her mouth. She would tuck it diligently behind her ear, until the next breeze undid it again. {i}Future outcast{/i}, she thought to herself. Just what was her mother thinking?"
-"The girl kept her head down as she passed them."
+nvl clear
 
-"If she hadn’t been watching so intently, she might’ve missed it. The mother tugging her child closer, like they’d seen something foul. The twitch of the upper lip. Their hurried steps."
-"She disgusted them. She knew it instinctively."
+"""\nShe passed a man sitting blearily on the sidewalk. His beer bottle had rolled away without him noticing; she gave him and his trash a wide berth. 
 
-"Shame made a pillar out of her. She twisted in place."
+At least the crowd was beginning to thin.
+
+\nThe girl had left the house in a hurry. But why?
+
+She was in no state to answer. It was a good thing she’d walked this road hundreds of times, or else there would be no telling where she might end up. 
+
+Tears pooled at the corners of her eyes. She looked, but didn’t see.
+
+That image was the only thing on her mind.
+
+Opening it, she felt as if her skin had been turned inside out. The urge to escape overtook her. She’d burst through the entryway, coatrack and winter boots tumbling behind her.
+
+\nIn the sequence of her days
+
+elegant in their simplicity, if by no other virtue
+
+something had began to rot.
+
+\nYes, that must be why–
+
+On that day, at that moment, she said those things she’d never meant for anyone to hear."""
+
+nvl clear
+
+"""\nIt should’ve been clumsy, like when she was laughed at for how she’d read ‘colonel’.
+
+Curses fit ill in her mouth. {i}I just can’t take you seriously with that voice.{/i}
+
+Instead, it came naturally.
+
+\nNaturally?
+
+Even though she wasn’t that sort of person at all?
+
+\nA flash of red caught her eye. 
+
+Up ahead, a mother and child were walking down the street. They seemed to be absorbed in conversation. Her steps slowed. The kid almost reached her mother’s shoulders; they were holding hands at an awkward angle.
+
+Didn’t Iris have a cardigan just like that?
+
+\nThey looked comical, like two fly agarics come to life. The kid’s hair had clearly never been cut for as long as she’d been alive. When the wind picked up, it sent it straight into her mouth. She would tuck it diligently behind her ear, until the next breeze undid it again. {i}Future outcast{/i}, she thought to herself.
+
+Just what was her mother thinking?
+
+The girl kept her head down as she passed them."""
+
+nvl clear
+
+"""\nIf she hadn’t been watching so intently, she might’ve missed it.
+
+The mother tugging her child closer, like they’d seen something foul.
+
+The twitch of the upper lip. Their hurried steps.
+
+\nShe disgusted them. She knew it instinctively.
+
+Shame made a pillar out of her. She twisted in place."""
 
 show ed rex despair alt with dissolve
 
-d "Ah…?"
+"\n\"Ah...?\""
 
 show ed rex despair with dissolve
 
-"The girl in the shop window was an utter mess. The tie in her hair was coming loose. She had rushed out of the house just as she was, and forgot all about brushing it."
+"\nThe girl in the shop window was an utter mess. The tie in her hair was coming loose. She had rushed out of the house just as she was, and forgot all about brushing it."
 "Her hoodie was askew on her gaunt body. It was only now that she noticed the holes in its sleeves."
 "Worse still, her expression–"
 
-"Eyes wide open, like in the moment of death."
+"\nEyes wide open, like in the moment of death."
 "You couldn’t fault anyone for being scared by it."
 
-d "Haha…"
+"\n\"Haha...\""
 
 "It was comical. It was all so comical."
 
-"On that day, in the dwindling afternoon sun,"
+nvl clear
+
+"\nOn that day, in the dwindling afternoon sun,"
 
 show ed rex despair alt with dissolve 
 
 "the girl never made it to her destination."
+
+"\n\n2D: THE CITY AT DUSK"
     # This ends the game.
 
 return
