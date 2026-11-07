@@ -1260,9 +1260,11 @@ There was no blood, but I couldn’t hear her breathing over the sound of the cu
 
 She looked more like the girl I knew now: the one who barely came up to the cabinet next to her. Dirty fingers, garish shirts, polkadots. Castles in the sand. It all felt like a lifetime ago. What kind of face was I making? I couldn’t tell.
 
-I crouched down beside her.
+I crouched down beside her."""
 
-Out of the corner of my eye, I saw a crow land on the balcony railing. Audrey’s skin was flushed with sunlight; her collarbone cast soft shadows below. She looked like she could’ve been ill.
+show ed pyg violence alt with dissolve
+
+"""Out of the corner of my eye, I saw a crow land on the balcony railing. Audrey’s skin was flushed with sunlight; her collarbone cast soft shadows below. She looked like she could’ve been ill.
 
 I didn’t hear anything except the ringing in my ears.
 
@@ -2438,7 +2440,11 @@ nvl clear
 
 "Shame made a pillar out of her. She twisted in place."
 
+show ed rex despair alt with dissolve
+
 d "Ah…?"
+
+show ed rex despair with dissolve
 
 "The girl in the shop window was an utter mess. The tie in her hair was coming loose. She had rushed out of the house just as she was, and forgot all about brushing it."
 "Her hoodie was askew on her gaunt body. It was only now that she noticed the holes in its sleeves."
@@ -2452,6 +2458,9 @@ d "Haha…"
 "It was comical. It was all so comical."
 
 "On that day, in the dwindling afternoon sun,"
+
+show ed rex despair alt with dissolve 
+
 "the girl never made it to her destination."
     # This ends the game.
 
