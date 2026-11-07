@@ -1,8 +1,8 @@
 # characters TODO add color
 
-define y = Character("IRIS", kind=nvl, bold = True)
-define p = Character("LION", kind=nvl, image="lion", bold = True)
-define r = Character("REX", kind=nvl, image="rex", bold = True)
+define y = Character("IRIS", kind=nvl, bold = True, color = "#C2BBC9")
+define p = Character("LION", kind=nvl, image="lion", bold = True, color = "#ACDAE3")
+define r = Character("REX", kind=nvl, image="rex", bold = True, color = "#E3ACAE")
 define d = Character(kind=nvl, what_prefix='"', what_suffix='"') #dialog for endings?
 define narrator = nvl_narrator
 # define config.nvl_paged_rollback = True
@@ -1154,7 +1154,7 @@ stop music fadeout 1
 "violence = [violence]\n despair = [despair]"
 
 nvl clear
-scene bg middle
+
 $ nvl_mode = "ed"
 $ gui.xanchor = 400
 $ gui.rebuild()
@@ -1172,6 +1172,9 @@ return
 #im not doing these until we have a layout
 
 label pv:
+
+scene bg middle ed with dis
+play music ticking
 
 """\nMy hand was already on the doorknob when I noticed the sound.
 
@@ -1196,6 +1199,7 @@ She was looking the place up and down as if making sure everything was in the pl
 This was fine. Great, really. I was ready to make do with a written apology, but now that I saw her face, the anger I’d forgotten about was starting to come back to me."""
 
 nvl clear
+stop music
 
 """\n{i}Audrey. I thought we were friends.{/i}
 
@@ -1234,6 +1238,7 @@ show black
 nvl clear
 
 hide black
+play sound barking
 
 """\n\"I’m not in your class because I fucking want to be!\"
 
@@ -1253,35 +1258,46 @@ If the world ended today and I was asked to recreate it, I’d do it exactly so.
 
 Her expression contorted with rage. It felt like I could see right up her nose if it weren’t for the light. I took a step back.
 
-Since when could she make such a horrible face?
+Since when could she make such a horrible face?"""
 
-\n\"The world doesn’t revolve around you, asshole!\""""
+play sound barking3
+
+"\n\"The world doesn’t revolve around you, asshole!\""
 
 nvl clear
+play music ticking2
 
 """\nIt happened before I could even register it.
 
-One moment, she was standing before me, and then she leapt for my neck, eyes lit with sparks.
+One moment, she was standing before me, and then she leapt for my neck, eyes lit with sparks."""
 
-{i}\n\"i think even a no has meaning{/i}
+"{i}\n\"i think even a no has meaning{/i}"
 
-{i}sometimes i don’t even realize it’s an option until i hear someone else say it\"{/i}
+"""{i}sometimes i don’t even realize it’s an option until i hear someone else say it\"{/i}
 
 \nI acted on pure reflex. I felt my back connect to the door and my hands grab hold of her wrists and push –
 
 She hit the ground with a thud.
 
-Seeing her limbs twisted around her should’ve made me feel something. Instead, all I could think was {i}she wanted this to be me{/i}.
+Seeing her limbs twisted around her should’ve made me feel something. Instead, all I could think was {i}she wanted this to be me{/i}."""
 
-The air suddenly felt too cold on my skin; I realized I was drenched in sweat. I pulled my phone from my pocket.
+stop music
 
-\nLION: I did it
+"The air suddenly felt too cold on my skin; I realized I was drenched in sweat. I pulled my phone from my pocket."
 
-I thought i would have to ask her to leave us alone
+play sound ticking3
 
-But i just did it
+"\nLION: I did it"
 
-\nThe pinch of her brows was quickly coming undone. She must’ve lost consciousness on her way down. It made me think of one of grandma’s stories."""
+play sound ticking3
+
+"I thought i would have to ask her to leave us alone"
+
+play sound ticking3
+
+"But i just did it"
+
+"\nThe pinch of her brows was quickly coming undone. She must’ve lost consciousness on her way down. It made me think of one of grandma’s stories."
 
 nvl clear
 
@@ -1289,9 +1305,11 @@ nvl clear
 
 \nShe was on her way to the post office when the lady walking in front of her tripped and fell, never to get up again. {i}She landed in the most unfortunate way,{/i} she said. It was over in an instant. I wasn’t allowed to leave the house for a week afterwards; she couldn’t relax unless she could see me.
 
-\nDid Audrey hurt herself on the threshold?
+\nDid Audrey hurt herself on the threshold?"""
 
-\nI looked at her again.
+play music loopish
+
+"""\nI looked at her again.
 
 There was no blood, but I couldn’t hear her breathing over the sound of the curtains.
 
@@ -1311,15 +1329,23 @@ return
 #"~end~?????"
 
 label pd:
-"""\nHis hand was already on the doorknob when he noticed the sound.
 
-That was odd. He wasn’t expecting another delivery.
+scene bg middle2 ed with dis
+###
+
+"\nHis hand was already on the doorknob when he noticed the sound."
+
+play music ticking
+
+"""That was odd. He wasn’t expecting another delivery.
 
 He fixed his eye on the peephole –
 
-\n\"Pyg? You in there?\"
+\n\"Pyg? You in there?\""""
 
-\nHis heart fell in an instant.
+play music ticking2
+
+"""\nHis heart fell in an instant.
 
 A thousand doubts pricked at his skin; he fought the urge to scratch at them, to pull at his hair. What was she doing here?
 
@@ -1350,19 +1376,27 @@ Now the girl on his doorstep looked invincible, too.
 
 Audrey, not a hair out of place. Weren’t there supposed to be consequences?
 
-\n\"All that bullshit, I mean.\"
+\n\"All that bullshit, I mean.\""""
 
-\nHis body was welded to the door. When she got closer to rap out a knock, it went through him like a foreign heartbeat.
+###
 
-Shame or punishment: those are the only things capable of keeping people in line. He remembered reading something like that once. If she wouldn’t learn from one, he would show her the other. She clearly felt no shame – that left him with only one option.
+"\nHis body was welded to the door. When she got closer to rap out a knock, it went through him like a foreign heartbeat."
 
-Audrey lowered her voice.
+"Shame or punishment: those are the only things capable of keeping people in line. He remembered reading something like that once. If she wouldn’t learn from one, he would show her the other. She clearly felt no shame – that left him with only one option."
 
-\n\"You don’t think anybody’s gonna ask?\"
+stop music
+
+"Audrey lowered her voice."
+
+play sound ticking3
+
+"""\n\"You don’t think anybody’s gonna ask?\"
 
 \nFor a moment, their eyes met. He sucked in a breath; was the peephole not one-way?"""
 
 nvl clear
+
+play sound barking3
 
 """\n\"Hey, where’d you get that picture? How long were you following us?{p}When you say she lay there for hours, you don’t mean...\"
 
@@ -1374,13 +1408,18 @@ Even the phone in his pocket seemed to burn against his skin.
 
 \n\"...stop...\"
 
-\nThe voice that came out of him could hardly even be called a whisper. He pressed his back to the door as if he could hold it closed. She was banging on it without restraint now.
+\nThe voice that came out of him could hardly even be called a whisper. He pressed his back to the door as if he could hold it closed. She was banging on it without restraint now."""
 
-He needed to call for help. He needed...
+###
 
-\n\"I thought you wanted to hear my response!\"
+"He needed to call for help. He needed..."
 
-\nNo, no, no. He couldn’t let Iris hear this!
+
+"\n\"I thought you wanted to hear my response!\""
+
+play music heartbeat
+
+"""\nNo, no, no. He couldn’t let Iris hear this!
 
 If he disappointed her now, he really would have no-one left to turn to!
 
@@ -1394,9 +1433,11 @@ nvl clear
 
 \n\"—--—-—-!!!\"
 
-\nJust where was her strength coming from?
+\nJust where was her strength coming from?"""
 
-The fact it was locked seemed entirely irrelevant. Every bang on the door rattled the walls; wind whistled through a gap in the frame. It was only a matter of time until it all came crashing down. He scrambled to put some futile distance between the two of them."""
+"The fact it was locked seemed entirely irrelevant. Every bang on the door rattled the walls; wind whistled through a gap in the frame. It was only a matter of time until it all came crashing down. He scrambled to put some futile distance between the two of them."
+
+with vpunch
 
 "\n\"But like, you watched her lay there and didn’t do anything? And you wanna talk about what’s wrong with ME?\""
 
@@ -1426,17 +1467,24 @@ teardrops were falling.
 
 There was nothing he could do. That was all he knew with any certainty.
 
-\nBut down there, on that road that ran from the playground to the convenience store, the one that used to be hemmed by cherry trees when he was little,
+\nBut down there, on that road that ran from the playground to the convenience store, the one that used to be hemmed by cherry trees when he was little,"""
 
-another pair of eyes met his.
+stop music
 
-\nIt took his breath away.
+"another pair of eyes met his."
 
-Maybe all that time he’d spent wishing to be saved wasn’t wasted after all. No, those words couldn’t just disappear in the wind! Trembling, he willed his hand to reach further –"""
+play music loopish
+
+"""\nIt took his breath away.
+
+Maybe all that time he’d spent wishing to be saved wasn’t wasted after all. No, those words couldn’t just disappear in the wind!
+
+Trembling, he willed his hand to reach further –"""
 
 show ed pyg despair alt
 with dissolve
 with vpunch
+stop music fadeout 1.5
 
 "\n\n1D: ALL EYES ON YOU"
 
@@ -2468,6 +2516,8 @@ return
 label rv:
 
 nvl clear
+scene bg middle ed with dis
+play music ticking
 
 """\nWe were friends, once upon a time.
 
@@ -2521,19 +2571,22 @@ I put on my best smile.
 \n\"You think this is gonna make her like you?\""""
 
 nvl clear
+play sound prelude_l
 
 """\nHe sucked in a breath.
 
 \n\"T-that has nothing to do with it...{p}
 I’m protecting her, like I should! Before she comes crashing down to Earth...\"
 
-\nHuh?
+\nHuh?"""
 
-\n\"Those thoughtless people who only feel safe in a crowd... they want to drag us down even if it kills us! They don’t value their own freedom because they’ve never known what to do with it. Impulse and reflex, that’s all they have!{p}But you’re {i}worse{/i}.\"
+show ed rex violence
+
+"""\n\"Those thoughtless people who only feel safe in a crowd... they want to drag us down even if it kills us! They don’t value their own freedom because they’ve never known what to do with it. Impulse and reflex, that’s all they have!{p}But you’re {i}worse{/i}.\"
 
 \nHis train of thought was quickly getting away from me. Crash down to Earth? I thought she’d hit the ground a while ago. An anxious pressure settled at the back of my head.
 
-His fists were trembling.
+His hands were shaking.
 
 \n\"Why does it matter to you what we do? I gave up so much already, but you’re still coming after me... If you want me to die, just come out and say it!\"
 
@@ -2542,12 +2595,15 @@ No, there was no way. They’d never even spoken to eachother. If they had, I wo
 
 nvl clear
 with vpunch
+play music ticking2
 
 """\nMy vision shook; I looked down to find that he’d seized both of my arms. Beneath the mess of hair, a tearful eye was staring straight at me.
 
-\n\"Why are you torturing me?!\"
+\n\"Why are you torturing me?!\""""
 
-\nA weak-willed boy tugging on my sleeve: that’s who he was supposed to be.
+hide ed rex violence
+
+"""\nA weak-willed boy tugging on my sleeve: that’s who he was supposed to be.
 
 Poor Pygmalion. With parents cruel enough to name him that, he never had a chance.
 
@@ -2577,24 +2633,31 @@ nvl clear
 
 See, I knew he was all talk.
 
-I knew, but my heart wouldn’t stop hammering in my chest.
+I knew, but my heart wouldn’t stop hammering in my chest."""
 
-I crouched down to his level. His head was hanging limply; he wasn’t even trying to move.
+play music ticking
+
+"""I crouched down to his level. His head was hanging limply; he wasn’t even trying to move.
 
 This was why these things happened to him. No matter how badly he was hurt, he would just lay there and wait for it to be over.
 
 \nAny second now, and he would look up at me.
 
-\nHe would look up at me.
+\nHe would look up at me."""
 
-\n\n2V: OLD FRIEND"""
+stop music
+
+"\n\n2V: OLD FRIEND"
 
 return
 
 label rd:
 
-scene bg middle
 nvl clear
+
+scene bg middle2 ed with dis
+play music ticking
+play sound street2
 
 """\nThe low-flying sun seared her eyes.
 
@@ -2627,9 +2690,11 @@ At least the crowd was beginning to thin.
 
 She was in no state to answer. It was a good thing she’d walked this road hundreds of times, or else there would be no telling where she might end up. 
 
-Tears pooled at the corners of her eyes. She looked, but didn’t see.
+Tears pooled at the corners of her eyes. She looked, but didn’t see."""
 
-That image was the only thing on her mind.
+play music ticking2
+
+"""That image was the only thing on her mind.
 
 Opening it, she felt as if her skin had been turned inside out. The urge to escape overtook her. She’d burst through the entryway, coatrack and winter boots tumbling behind her.
 
@@ -2649,13 +2714,17 @@ nvl clear
 
 Curses fit ill in her mouth. {i}I just can’t take you seriously with that voice.{/i}
 
-Instead, it came naturally.
+Instead, it came naturally."""
 
-\nNaturally?
+stop music
 
-Even though she wasn’t that sort of person at all?
+"""\nNaturally?
 
-\nA flash of red caught her eye. 
+Even though she wasn’t that sort of person at all?"""
+
+play music ticking
+
+"""\nA flash of red caught her eye. 
 
 Up ahead, a mother and child were walking down the street. They seemed to be absorbed in conversation. Her steps slowed. The kid almost reached her mother’s shoulders; they were holding hands at an awkward angle.
 
@@ -2673,9 +2742,11 @@ nvl clear
 
 The mother tugging her child closer, like they’d seen something foul.
 
-The twitch of the upper lip. Their hurried steps.
+The twitch of the upper lip. Their hurried steps."""
 
-\nShe disgusted them. She knew it instinctively.
+stop music
+
+"""\nShe disgusted them. She knew it instinctively.
 
 Shame made a pillar out of her. She twisted in place."""
 
@@ -2688,6 +2759,8 @@ show ed rex despair with dissolve
 "\nThe girl in the shop window was an utter mess. The tie in her hair was coming loose. She had rushed out of the house just as she was, and forgot all about brushing it."
 "Her hoodie was askew on her gaunt body. It was only now that she noticed the holes in its sleeves."
 "Worse still, her expression–"
+
+play sound ticking3
 
 "\nEyes wide open, like in the moment of death."
 "You couldn’t fault anyone for being scared by it."
