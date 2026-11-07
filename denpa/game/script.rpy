@@ -24,9 +24,13 @@ transform lion_scr: #position for pygs image
     xalign 0.95
     yalign 0.7
 
-transform rex_scr: #position for rexs image TODO check
+transform rex_scr:
     xalign 0.05
     yalign 0.7
+
+transform selfie_scr: #position for rexs image TODO check
+    xalign 0.85
+    yalign 0.5
     
 # The game starts here.
 
@@ -1328,15 +1332,22 @@ d "—-------!!!"
 
 d "But like, you watched her lay there and didn’t do anything? And you wanna talk about what’s wrong with ME?"
 
+show ed pyg despair alt with dissolve
+
 "When he crossed the threshold into the living room, the balcony door was open."
 
 d "You think YOU’VE got a right to judge anybody?"
+
+
 
 "The world outside his window was silent. He wanted to call for help, but nothing in him moved. He leaned over the railing limply."
 
 "A tepid wind caressed his face."
 "It was a familiar feeling."
 "The people below came and went; his hand that reached out slid off of them without touching anything."
+
+show ed pyg despair with dissolve
+
 "Somewhere,"
 "several stories down,"
 "teardrops were falling."
@@ -1347,6 +1358,8 @@ d "You think YOU’VE got a right to judge anybody?"
 
 "It took his breath away."
 "Maybe all that time he’d spent wishing to be saved wasn’t wasted after all. No, those words couldn’t just disappear in the wind! Trembling, he willed his hand to reach further –"
+
+show ed pyg despair alt with dissolve
 #"(BANG)"
 #"~end~"
 return
@@ -2007,7 +2020,13 @@ r "man"
 
 show rex thinking
 
+$ nvl_mode = "selfie"
+
+#show selfie onlayer screens zorder 11 at selfie_scr with dissolve
+
 "and this picture we took at the bakery"
+
+
 
 menu(nvl=True):
     "1. About her":
@@ -2068,6 +2087,8 @@ label rdespair2:
     jump rcont2
 
 label rcont2:
+
+$ nvl_mode = "rex"
 
 nvl clear
 

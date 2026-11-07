@@ -87,22 +87,23 @@ screen quick_menu():
     zorder 100
 
     if quick_menu:
-        if nvl_mode == "rex":
+        if nvl_mode == "rex" or nvl_mode== "selfie":
             image 'quickbar.png' at rexbar
-        else:
+        elif nvl_mode != "ed":
             image 'quickbar.png' at qbar
         vbox:
-            if nvl_mode == "rex":
+            if nvl_mode == "rex" or nvl_mode== "selfie":
                 style_prefix "inverse"
-            else:
+            elif nvl_mode !="ed":
                 style_prefix "quick"
 
-            textbutton _("BACK") action Rollback()
-            textbutton _("LOG") action ShowMenu('history')
-            textbutton _("SKIP") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("AUTO") action Preference("auto-forward", "toggle")
-            textbutton _("SAVE") action ShowMenu('save')
-            textbutton _("OPTION") action ShowMenu('preferences')
+            if nvl_mode !="ed":
+                textbutton _("BACK") action Rollback()
+                textbutton _("LOG") action ShowMenu('history')
+                textbutton _("SKIP") action Skip() alternate Skip(fast=True, confirm=True)
+                textbutton _("AUTO") action Preference("auto-forward", "toggle")
+                textbutton _("SAVE") action ShowMenu('save')
+                textbutton _("OPTION") action ShowMenu('preferences')
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
@@ -141,11 +142,14 @@ style quick_button_text: #colors for back history etc
 
 screen nvl(dialogue, items=None):
 
+    zorder 10
     window:
         if nvl_mode == "ed":
             style "ed_window"
         elif nvl_mode == "rex":
             style "rex_window"
+        elif nvl_mode == "selfie":
+            style "selfie_window"
         else:
             style "nvl_window"
 
@@ -160,7 +164,7 @@ screen nvl(dialogue, items=None):
 
             textbutton i.caption:
                 action i.action
-                if nvl_mode == "rex":
+                if nvl_mode == "rex" or nvl_mode== "selfie":
                     style "rex_button"
                 else:
                     style "nvl_button"
@@ -179,9 +183,10 @@ screen nvl_dialogue(dialogue):
                 yfit True
 
                 if d.who is not None:
+                    
 
                     text d.who:
-                        if nvl_mode == "rex": #special rex position for special rex
+                        if nvl_mode == "rex" or nvl_mode== "selfie": #special rex position for special rex
                             xpos 410
                         id d.who_id
 
@@ -189,7 +194,7 @@ screen nvl_dialogue(dialogue):
                     if nvl_mode == "ed": #position for ending nvl segment
                         xpos 240
                         xsize 800
-                    elif nvl_mode == "rex":
+                    elif nvl_mode == "rex" or nvl_mode== "selfie":
                         xpos 410
                     id d.what_id
 
@@ -208,6 +213,12 @@ style rex_window:
     is default
     xfill True yfill True
     background "gui/nvlrex.png"
+    padding (0, 0, 0, 15)
+
+style selfie_window:
+    is rex_window
+    xfill True yfill True
+    background "gui/nvlselfie.png"
     padding (0, 0, 0, 15)
 
 
@@ -231,6 +242,7 @@ style nvl_label:
 # The style for dialogue in NVL
 style nvl_dialogue:
     is say_dialogue
+    
     xpos 170
     ypos 35 yanchor -10
     xsize 700
