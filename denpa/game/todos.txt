@@ -6,6 +6,7 @@
 - make
 - change history screen
 - credits roll
+- save frames dont respond on right half
 
 CGs
 1: maybe rex on the other side of the door?
