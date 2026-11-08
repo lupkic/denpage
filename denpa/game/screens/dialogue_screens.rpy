@@ -131,6 +131,11 @@ style quick_button_text: #colors for back history etc
     size 20
     selected_color '#9a9a9a'
     idle_color "#484848"
+    
+style inverse_button_text: #colors for back history etc
+    size 20
+    selected_color '#9a9a9a'
+    idle_color "#484848"
 
 ## NVL screen ##################################################################
 ##
