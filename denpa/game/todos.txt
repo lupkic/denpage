@@ -1,9 +1,11 @@
 - ctc
-- colorsss
 - main menu music (options.rpy)
 - transition when you press play on main menu
-- screen shake for 1D
-
+- 2d rex more cry more sweat
+- change rollback
+- make
+- change history screen
+- credits roll
 
 CGs
 1: maybe rex on the other side of the door?
