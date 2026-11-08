@@ -87,12 +87,12 @@ screen quick_menu():
     zorder 100
 
     if quick_menu:
-        if nvl_mode == "rex" or nvl_mode== "selfie":
+        if nvl_mode == "rex" or nvl_mode== "selfie" or nvl_mode== "creepy":
             image 'quickbar.png' at rexbar
         elif nvl_mode != "ed":
             image 'quickbar.png' at qbar
         vbox:
-            if nvl_mode == "rex" or nvl_mode== "selfie":
+            if nvl_mode == "rex" or nvl_mode== "selfie" or nvl_mode== "creepy":
                 style_prefix "inverse"
             elif nvl_mode !="ed":
                 style_prefix "quick"
@@ -155,6 +155,8 @@ screen nvl(dialogue, items=None):
             style "rex_window"
         elif nvl_mode == "selfie":
             style "selfie_window"
+        elif nvl_mode == "creepy":
+            style "creepy_window"
         else:
             style "nvl_window"
 
@@ -169,7 +171,7 @@ screen nvl(dialogue, items=None):
 
             textbutton i.caption:
                 action i.action
-                if nvl_mode == "rex" or nvl_mode== "selfie":
+                if nvl_mode == "rex" or nvl_mode== "selfie" or nvl_mode== "creepy":
                     style "rex_button"
                 else:
                     style "nvl_button"
@@ -191,7 +193,7 @@ screen nvl_dialogue(dialogue):
                     
 
                     text d.who:
-                        if nvl_mode == "rex" or nvl_mode== "selfie": #special rex position for special rex
+                        if nvl_mode == "rex" or nvl_mode== "selfie" or nvl_mode== "creepy": #special rex position for special rex
                             xpos 410
                         id d.who_id
 
@@ -199,7 +201,7 @@ screen nvl_dialogue(dialogue):
                     if nvl_mode == "ed": #position for ending nvl segment
                         xpos 240
                         xsize 800
-                    elif nvl_mode == "rex" or nvl_mode== "selfie":
+                    elif nvl_mode == "rex" or nvl_mode== "selfie" or nvl_mode== "creepy":
                         xpos 410
                     id d.what_id
 
@@ -224,6 +226,13 @@ style selfie_window:
     is rex_window
     xfill True yfill True
     background "gui/nvlselfie.png"
+    padding (0, 0, 0, 15)
+
+    
+style creepy_window:
+    is rex_window
+    xfill True yfill True
+    background "gui/nvlcreepshot.png"
     padding (0, 0, 0, 15)
 
 

@@ -59,6 +59,7 @@ label chat_pyg:
 
 $nvl_mode = "pyg" #this does nothing bc pyg is default but its good to make him feel included
 
+play sound ticking3
 show lion neutral at lion_scr
 
 play music loopish fadein 1 volume 0.7
@@ -203,6 +204,9 @@ show lion neutral
 
 "Its just not safe"
 "Shes waiting for you to slip up"
+
+show lion miffed
+
 "That viper"
 
 "Its true that i havent really talked to her but I dont think thats the only way to really know a person"
@@ -389,11 +393,13 @@ show lion happy
 "Maybe you pity her. Youre a good person after all"
 "But it wont end well"
 
-show lion neutral
+show lion miffed
 
 "Shes trying to take you away from me"
 "Your body will still be here"
 "But thats all"
+
+show lion neutral
 
 p "Or are you just doing it to get back at me?"
 "Do you hate me?"
@@ -694,7 +700,7 @@ p "A family..."
 nvl clear
 
 play sound "prelude_r.mp3"
-show lion neutral
+show lion miffed
 
 p "Iris"
 "How come"
@@ -791,7 +797,7 @@ label pviolence1:
     
     show lion hiding
 
-    "\n(VIOLENCE +1)"
+    "\n(+1 VIOLENCE)"
     $ violence+=1
     jump pcont1
 
@@ -843,7 +849,7 @@ label pdespair1:
     
     p "..."
 
-    "\n(DESPAIR +1)"
+    "\n(+1 DESPAIR)"
     $ despair+=1
     jump pcont1
 
@@ -862,6 +868,9 @@ y "why should i be"
 show lion neutral
 
 p "Because I saw"
+
+show lion miffed
+
 "When you"
 
 show lion right
@@ -935,7 +944,7 @@ label pviolence2:
     p "She just wants to ruin my life"
     "I cant think of any other reason"
 
-    show lion neutral
+    show lion miffed
 
     "Audrey"
     "always on her way up"
@@ -1011,7 +1020,7 @@ label pcont2:
 
 nvl clear
 
-show lion neutral
+show lion miffed
 
 p "Dont worry"
 "Ill show her consequences"
@@ -1144,7 +1153,7 @@ p "Hehe. Yeah"
 "They look so warm there in the sun"
 "Makes me want to protect them"
 
-"\n(VIOLENCE +1)"
+"\n(+1 VIOLENCE)"
 
 $ violence+=1
 jump pcont3
@@ -1168,6 +1177,8 @@ $ despair+=1
 jump pcont3
 
 label pcont3:
+
+nvl clear
 
 p "I think ill step out a little after all"
 
@@ -1200,7 +1211,7 @@ return
 
 label pv:
 
-scene bg middle ed with dis
+scene bg middle ed with dissolve
 play music ticking
 
 """\nMy hand was already on the doorknob when I noticed the sound.
@@ -1302,11 +1313,15 @@ One moment, she was standing before me, and then she leapt for my neck, eyes lit
 
 """{i}sometimes i don’t even realize it’s an option until i hear someone else say it\"{/i}
 
-\nI acted on pure reflex. I felt my back connect to the door and my hands grab hold of her wrists and push –
+\nI acted on pure reflex. I felt my back connect to the door and my hands grab hold of her wrists and push –"""
 
-She hit the ground with a thud.
+play sound fall
+"She hit the ground with a thud."
+nvl hide
+show ed pyg violence with dissolve
+pause 1.0
 
-Seeing her limbs twisted around her should’ve made me feel something. Instead, all I could think was {i}she wanted this to be me{/i}."""
+"Seeing her limbs twisted around her should’ve made me feel something. Instead, all I could think was {i}she wanted this to be me{/i}."
 
 stop music
 
@@ -1343,8 +1358,9 @@ There was no blood, but I couldn’t hear her breathing over the sound of the cu
 She looked more like the girl I knew now: the one who barely came up to the cabinet next to her. Dirty fingers, garish shirts, polkadots. Castles in the sand. It all felt like a lifetime ago. What kind of face was I making? I couldn’t tell.
 
 I crouched down beside her."""
-
+nvl hide
 show ed pyg violence alt with dissolve
+pause 1.0
 
 """Out of the corner of my eye, I saw a crow land on the balcony railing. Audrey’s skin was flushed with sunlight; her collarbone cast soft shadows below. She looked like she could’ve been ill.
 
@@ -1357,12 +1373,13 @@ return
 
 label pd:
 
-scene bg middle2 ed with dis
+scene bg middle2 ed with dissolve
 ###
 
 "\nHis hand was already on the doorknob when he noticed the sound."
 
 play music ticking
+play sound knock
 
 """That was odd. He wasn’t expecting another delivery.
 
@@ -1405,7 +1422,7 @@ Audrey, not a hair out of place. Weren’t there supposed to be consequences?
 
 \n\"All that bullshit, I mean.\""""
 
-###
+play sound knock
 
 "\nHis body was welded to the door. When she got closer to rap out a knock, it went through him like a foreign heartbeat."
 
@@ -1435,9 +1452,11 @@ Even the phone in his pocket seemed to burn against his skin.
 
 \n\"...stop...\"
 
-\nThe voice that came out of him could hardly even be called a whisper. He pressed his back to the door as if he could hold it closed. She was banging on it without restraint now."""
+\nThe voice that came out of him could hardly even be called a whisper. He pressed his back to the door as if he could hold it closed.{nw}"""
 
-###
+play sound bang2
+
+extend " She was banging on it without restraint now."
 
 "He needed to call for help. He needed..."
 
@@ -1456,6 +1475,8 @@ Which one was he more afraid of?"""
 
 nvl clear
 
+play sound bang
+
 """\n\"You know that I’m barely even in that photo, right? Post it! Spread it all over the internet! I’m sure she’d love that.\"
 
 \n\"—--—-—-!!!\"
@@ -1468,7 +1489,9 @@ with vpunch
 
 "\n\"But like, you watched her lay there and didn’t do anything? And you wanna talk about what’s wrong with ME?\""
 
+nvl hide
 show ed pyg despair alt with dissolve
+pause 1.0
 
 "\nWhen he crossed the threshold into the living room, the balcony door was open."
 
@@ -1476,15 +1499,15 @@ show ed pyg despair alt with dissolve
 
 "\nThe world outside his window was silent. He wanted to call for help, but nothing in him moved. He leaned over the railing limply."
 
-show ed pyg despair with dissolve
 nvl clear
 
-"""\nA tepid wind caressed his face.
+"\nA tepid wind caressed his face."
+"It was a familiar feeling."
+nvl hide
+show ed pyg despair with dissolve
+pause 1.0
 
-It was a familiar feeling.
-
-The people below came and went; his hand that reached out slid off of them without touching anything."""
-
+"The people below came and went; his hand that reached out slid off of them without touching anything."
 
 """\nSomewhere,
 
@@ -1508,9 +1531,11 @@ Maybe all that time he’d spent wishing to be saved wasn’t wasted after all. 
 
 Trembling, he willed his hand to reach further –"""
 
+nvl hide
 show ed pyg despair alt
 with dissolve
 with vpunch
+pause 1.0
 stop music fadeout 1.5
 
 "\n\n1D: ALL EYES ON YOU"
@@ -1525,6 +1550,7 @@ label chat_rex:
 
 $nvl_mode = "rex"
 
+play sound ticking3
 r "ok lets take it from the top"
 
 play music street fadein 1
@@ -2222,7 +2248,7 @@ label rviolence2:
 
     "fuck you."
     
-    "\n(+1 VIOLENCE?)"
+    "\n(+1 VIOLENCE)"
     $ violence += 1
     jump rcont2
 
@@ -2341,6 +2367,7 @@ r "wait"
 "her"
 
 nvl clear
+$ nvl_mode = "creepy"
 
 r "this is from..."
 "when we last saw eachother"
@@ -2401,12 +2428,14 @@ return
 label rdespair3:
     
     nvl clear
+
+    $nvl_mode = "rex"
     
     y "Are you sure youre as friendly with them as you think you are?"
-    
+
     r "i am literally just some girl in their class"
 
-    show rex uncollected
+    show rex worried
 
     "if thats enough to make someone hate me this much"
     "im not sure what i can do"
@@ -2418,6 +2447,7 @@ label rdespair3:
 label rviolence3:
 
     nvl clear
+    $nvl_mode = "rex"
 
     y "You're not exactly an open book yourself"
     
@@ -2555,7 +2585,7 @@ return
 label rv:
 
 nvl clear
-scene bg middle ed with dis
+scene bg middle ed with dissolve
 play music ticking
 
 """\nWe were friends, once upon a time.
@@ -2587,7 +2617,7 @@ Unfortunately, his posture was shrinking in real time."""
 
 nvl clear
 
-"""\n\"Can I ask for your help with something? I got this weird e-mail...\"
+"""\n\"Can I ask for your help with something?{cps=2} {/cps}I got this weird e-mail...\"
 
 \nI stepped closer – he stumbled backwards. Relief washed over me; the whole world could turn upside down and he would still be exactly as I knew. I let myself into the apartment.
 
@@ -2619,7 +2649,10 @@ I’m protecting her, like I should! Before she comes crashing down to Earth...\
 
 \nHuh?"""
 
-show ed rex violence
+nvl hide
+show ed rex violence with dissolve
+pause 1.0
+
 
 """\n\"Those thoughtless people who only feel safe in a crowd... they want to drag us down even if it kills us! They don’t value their own freedom because they’ve never known what to do with it. Impulse and reflex, that’s all they have!{p}But you’re {i}worse{/i}.\"
 
@@ -2640,11 +2673,11 @@ play music ticking2
 
 \n\"Why are you torturing me?!\""""
 
-hide ed rex violence
+"\nA weak-willed boy tugging on my sleeve: that’s who he was supposed to be."
 
-"""\nA weak-willed boy tugging on my sleeve: that’s who he was supposed to be.
+hide ed rex violence with dissolve
 
-Poor Pygmalion. With parents cruel enough to name him that, he never had a chance.
+"""Poor Pygmalion. With parents cruel enough to name him that, he never had a chance.
 
 No, that couldn’t be true. All he had to do was throw me under first. It wasn’t my fault it never occurred to him.
 
@@ -2664,9 +2697,12 @@ He was clearly out of his mind. If he didn’t let go of me, I’d have to make 
 
 nvl clear
 
-"""\nPulling away didn’t work. Instead, I shifted my weight to my back foot and slammed him into the dresser. The impact sent hats and other garbage raining down on us.
+"\nPulling away didn’t work. Instead, I shifted my weight to my back foot and slammed him into the dresser. The impact sent hats and other garbage raining down on us."
 
-\n\"Eek!\"
+with vpunch
+play sound fall
+
+"""\n\"Eek!\"
 
 \nWithout me to hold on to, Pygmalion stumbled and fell backwards onto his ass.
 
@@ -2675,6 +2711,10 @@ See, I knew he was all talk.
 I knew, but my heart wouldn’t stop hammering in my chest."""
 
 play music ticking
+
+nvl hide
+show ed rex violence alt with dissolve
+pause 1.0
 
 """I crouched down to his level. His head was hanging limply; he wasn’t even trying to move.
 
@@ -2694,7 +2734,7 @@ label rd:
 
 nvl clear
 
-scene bg middle2 ed with dis
+scene bg middle2 ed with dissolve
 play music ticking
 play sound street2
 
@@ -2731,11 +2771,12 @@ She was in no state to answer. It was a good thing she’d walked this road hund
 
 Tears pooled at the corners of her eyes. She looked, but didn’t see."""
 
+
+"That image was the only thing on her mind."
+
 play music ticking2
 
-"""That image was the only thing on her mind.
-
-Opening it, she felt as if her skin had been turned inside out. The urge to escape overtook her. She’d burst through the entryway, coatrack and winter boots tumbling behind her.
+"""Opening it, she felt as if her skin had been turned inside out. The urge to escape overtook her. She’d burst through the entryway, coatrack and winter boots tumbling behind her.
 
 \nIn the sequence of her days
 
@@ -2789,11 +2830,16 @@ stop music
 
 Shame made a pillar out of her. She twisted in place."""
 
+nvl hide
 show ed rex despair alt with dissolve
+pause 1.0
+
 
 "\n\"Ah...?\""
 
+nvl hide
 show ed rex despair with dissolve
+pause 1.0
 
 "\nThe girl in the shop window was an utter mess. The tie in her hair was coming loose. She had rushed out of the house just as she was, and forgot all about brushing it."
 "Her hoodie was askew on her gaunt body. It was only now that she noticed the holes in its sleeves."
@@ -2812,7 +2858,9 @@ nvl clear
 
 "\nOn that day, in the dwindling afternoon sun,"
 
+nvl hide
 show ed rex despair alt with dissolve 
+pause 1.0
 
 "the girl never made it to her destination."
 
