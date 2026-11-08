@@ -31,6 +31,15 @@ transform rex_scr:
 transform selfie_scr: #position for rexs image TODO check
     xalign 0.85
     yalign 0.5
+
+screen imagemap_example():
+    imagemap:
+        idle "chapter base"
+        hover "chapter select"
+
+        hotspot (127, 150, 504, 489) action Jump("chat_pyg") alt "Lion"
+        hotspot (649, 145, 507, 449) action Jump("chat_rex") alt "Rex"
+
     
 # The game starts here.
 
@@ -38,29 +47,25 @@ label start:
 
     $ violence = 0
     $ despair = 0
-    $ nvl_mode = 0
+    $ nvl_mode = "ed"
 
-    scene bg messy
+    scene bg select
 
-    menu:
-        "case 1":
-            jump chat_pyg
+    call screen imagemap_example
 
-        "case 2":
-            jump chat_rex
 return
 
 label chat_pyg:
 
 $nvl_mode = "pyg" #this does nothing bc pyg is default but its good to make him feel included
 
-scene bg blue2 #TODO figure out nvl fade effect
 show lion neutral at lion_scr
 
 play music loopish fadein 1 volume 0.7
 p "I didnt get a chance to tell you after class but"
 
 show lion happy
+show bg blue2 with dis #TODO figure out nvl fade effect
 
 "Dont listen to the prof your presentation was really good!"
 "Ive been looking into the topic a little myself and what you said lines up really well with something they were debating in the 50s"
@@ -113,8 +118,13 @@ nvl clear
 show lion neutral
 
 p "Have you read Weininger?"
+
+show weininger onlayer overlay zorder 15
+play sound ticking3
+
 "I can send you a good summary but basically I think"
 
+show weininger onlayer overlay zorder 15
 play sound "barking.mp3"
 
 "Theres no soul in there"
@@ -653,19 +663,35 @@ show lion right
 "Wasnt as bad when grandma was still around"
 
 nvl clear
-#TODO:"--this could be a good place to set up some asinine parallel convos for the bot and maybe even cover pyg up with them. actually i think conspiracies too<3"
+
 
 y "do you miss her?"
 
 
 p "I dont know. She was a nag"
+
+show parallel un onlayer overlay zorder 15
+play sound ticking3
+
 "I couldnt do anything right in her eyes"
+
+show parallel deux onlayer overlay zorder 15
+play sound ticking3
+
 "But at least"
+
+show parallel trois onlayer overlay zorder 15
+play sound ticking3
+
 "We could act like a family"
 
+show parallel yeowch onlayer overlay zorder 15
+play sound ticking3
 show lion hiding
 
 p "A family..."
+
+nvl clear
 
 play sound "prelude_r.mp3"
 show lion neutral
@@ -684,7 +710,6 @@ show lion low
 "Why is it creepy only when i do it?"
 
 show lion hiding
-nvl clear
 
 p "They should be grateful"
 "All those things they forgot about"
@@ -847,6 +872,7 @@ show lion right
 p "When Audrey"
 
 show lion pissed
+show memory with dis
 
 "That bitch laid a hand on you i cant believe she did that still i mean it couldnt have possibly been that important she never talks about ANYTHING important so why did she have to"
 "Shove you like that"
@@ -890,6 +916,7 @@ label pviolence2:
     
     nvl clear
     show bg orange2 with dis
+    hide memory
     
     y "i don’t know why i thought i could trust her"
     "i’m really sorry"
@@ -936,7 +963,7 @@ label pdespair2:
 
     nvl clear
     show bg orange2 with dis
-
+    hide memory
 
     y "sometimes"
 
@@ -1885,10 +1912,22 @@ y "Do you mean Laocoon?"
 show rex mocking
 
 r "right thats the one"
+
+show laocoon onlayer overlay zorder 15
+play sound ticking3
+
 "ive always liked his ribs"
+
+show laocoon onlayer overlay zorder 15
+
 "the torso full of one sharp breath"
+
+show laocoon onlayer overlay zorder 15
+
 "or a scream"
+
 "frozen in the moment"
+
 "nothing coming in or out"
 
 show rex neutral

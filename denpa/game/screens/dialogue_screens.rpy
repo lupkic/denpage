@@ -119,7 +119,7 @@ style quick_vbox: #quickmenu box
     spacing 40
 
 style inverse_vbox:
-    xalign 0.980 
+    xalign 0.965 
     yalign 0.50
     spacing 40
 
