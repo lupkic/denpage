@@ -1,20 +1,20 @@
 - ctc
 - main menu music (options.rpy)
 - transition when you press play on main menu
-- 2d rex more cry more sweat
 - change rollback
 - make
 - change history screen
 - credits roll
-- save frames dont respond on right half
-- pyg head tilt sprite
+- another sound channel on renpy for ed
 
-CGs
-1: maybe rex on the other side of the door?
-1V: pyg crouching and crow, rex maaaaybe in the edge of the picture but not the focus
-1D: pyg reaching over railing trying to reach for smth, empty balcony
-2V:
-2D:rex in the shop window, alt expression?
+IMGS TODO
+- creepshot lineart + color
+- selfie lineart + color
+- rex despair more cry more
+- title img
+- pyg head tilt sprite
+- rex on commute sprite neutral + thinking
+- rex sprites polish
 
 if were bored on the 11th:
 - 1v phone alt
