@@ -63,7 +63,7 @@ style input:
 
 style hyperlink_text:
     hover_underline True
-    color "#f93c3e"
+    color "#528fba"
 
 style gui_text: #main menu + settings etc
     color '#ffffff'
@@ -82,7 +82,7 @@ style button_text:
     ## The color used for a text button when it is neither selected nor hovered.
     idle_color '#888888'
     ## The color that is used for buttons and bars that are hovered.
-    hover_color '#ff8335'
+    hover_color 'C2BBC9'
     ## The color used for a text button when it is selected but not focused. A
     ## button is selected if it is the current screen or preference value.
     selected_color '#ffffff'
@@ -92,7 +92,7 @@ style button_text:
 style label_text:
     is gui_text
     size 36
-    color '#f93c3e'
+    color '#C2BBC9'
 
 
 style bar:

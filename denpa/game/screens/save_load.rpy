@@ -9,8 +9,8 @@
 
 
 ## The width and height of thumbnails used by the save slots.
-define config.thumbnail_width = 385
-define config.thumbnail_height = 217
+define config.thumbnail_width = 375
+define config.thumbnail_height = 207
 
 
 screen save():
@@ -119,12 +119,12 @@ style page_label: #text that says Page x. TODO broken for auto/quicksave
 style page_label_text:
     textalign 0.5
     layout "subtitle"
-    hover_color '#ff8335'
+    hover_color '#C2BBC9'
 
 style slot_grid:
-    xalign 0.63 #TODO i dont think this is aligned properly but its almost 11pm.
+    xalign 0.53 #TODO i dont think this is aligned properly but its almost 11pm.
     yalign 0.1
-    spacing 130
+    spacing 40
 
 style slot_time_text:
     size 20
@@ -134,15 +134,15 @@ style slot_vbox:
     spacing 1
 
 style slot_button:
-    xysize (266 , 150)
-    padding (15, 15, 15, 15)
+    xysize (375 , 207) #TODO this seems to be our active area but it fucks up a looottt more ok wait did i do it???
+    padding (20, 20, 20, 20)
     background "gui/button/slot_[prefix_]background.png"
 
 style slot_button_text:
     size 21
     xalign 0.5
     idle_color '#aaaaaa'
-    hover_color '#ff8335'
+    hover_color '#C2BBC9'
     selected_idle_color '#ffffff'
 
 style page_hbox:

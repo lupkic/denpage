@@ -621,7 +621,7 @@ p "Sorry"
 "Happens"
 
 play music loopish fadein 1 volume 0.7
-show lion low
+show lion right
 
 p "The noise is gone"
 "Ill just eat my oatmeal"
@@ -630,7 +630,7 @@ p "Do you think the prof would mind if i didnt turn in anything"
 "I dont really"
 "feel up to it right now"
 
-show lion right
+show lion low
 
 p "I put in strawberry jam this time"
 "Looks kind of gross"
@@ -710,7 +710,6 @@ p "Iris"
 "so why"
 "when i finally find something"
 
-show lion low
 
 "why is it wrong?"
 "Why is it creepy only when i do it?"
