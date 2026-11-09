@@ -7,6 +7,7 @@
 - change history screen
 - credits roll
 - save frames dont respond on right half
+- pyg head tilt sprite
 
 CGs
 1: maybe rex on the other side of the door?
