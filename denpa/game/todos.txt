@@ -5,18 +5,18 @@
 - make
 - change history screen
 - credits roll
-- save frames dont respond on right half
-- pyg head tilt sprite
-- rex on commute sprite neutral + thinking
 - another sound channel on renpy for ed
 
-CGs TODO
+IMGS TODO
 - creepshot lineart + color
 - selfie lineart + color
 - violence cgs bg
 - rex despair more cry more
-- rex violence alt lineart finish + color
+- rex violence alt color
 - title img
+- pyg head tilt sprite
+- rex on commute sprite neutral + thinking
+- rex sprites polish
 
 if were bored on the 11th:
 - 1v phone alt
