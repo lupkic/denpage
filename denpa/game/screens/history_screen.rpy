@@ -16,9 +16,9 @@ screen history():
     ## Avoid predicting this screen, as it can be very large.
     predict False
 
-    add HBox(Transform("#292835", xsize=350), "#21212db2") # The background; can be whatever
+    add HBox("#000000") # The background; can be whatever
 
-    use game_menu(_("History"))
+    use game_menu(_("Log"))
 
     viewport:
         style_prefix 'game_menu'
@@ -40,10 +40,10 @@ screen history():
                         ## from the Character, if set
                         if "color" in h.who_args:
                             text_color h.who_args["color"]
-                        xsize 200   # this number and the null width
+                        xsize 35   # this number and the null width
                                     # number should be the same
                 else:
-                    null width 200
+                    null width 35
 
                 $ what = renpy.filter_text_tags(h.what, allow=gui.history_allow_tags)
                 text what:
@@ -59,7 +59,7 @@ define gui.history_allow_tags = { "alt", "noalt", "rt", "rb", "art" }
 
 
 style history_frame:
-    xsize 1400
+    xsize 600
     ysize None
     background None
 

@@ -1,4 +1,4 @@
-# characters TODO add color
+﻿# characters TODO add color
 
 define y = Character("IRIS", kind=nvl, bold = True, color = "#C2BBC9")
 define p = Character("LION", kind=nvl, image="lion", bold = True, color = "#ACDAE3")
@@ -41,6 +41,9 @@ screen imagemap_example():
         hotspot (649, 145, 507, 449) action Jump("chat_rex") alt "Rex"
 
     
+init python:
+    renpy.music.register_channel("extra", "music")
+
 # The game starts here.
 
 label start:
@@ -1212,12 +1215,13 @@ label pv:
 
 scene bg middle ed with dissolve
 play music ticking
+play extra prelude_womp volume 0.7 fadein .5
 
-"""\nMy hand was already on the doorknob when I noticed the sound.
+"\nMy hand was already on the doorknob when I noticed the sound."
 
-I opened it up to find –
+"I opened it up to find –"
 
-\n\"Hey.\"
+"""\n\"Hey.\"
 
 \nI blinked a little more forcefully than usual. Was my mind playing tricks on me? It couldn’t have been more than an hour since I sent the message.
 
@@ -1328,7 +1332,7 @@ stop music
 
 play sound ticking3
 
-"\nLION: I did it"
+"\n{font=ipam.ttf}{b}LION:{/b}{/font} I did it"
 
 play sound ticking3
 
@@ -1363,9 +1367,11 @@ pause 1.0
 
 """Out of the corner of my eye, I saw a crow land on the balcony railing. Audrey’s skin was flushed with sunlight; her collarbone cast soft shadows below. She looked like she could’ve been ill.
 
-\nI didn’t hear anything except the ringing in my ears.
+\nI didn’t hear anything except the ringing in my ears."""
 
-\n\n1V: PYGMALION, TRIUMPHANT"""
+stop extra fadeout 1
+
+"\n\n1V: PYGMALION, TRIUMPHANT"
 return
 
 #"~end~?????"
@@ -1373,7 +1379,7 @@ return
 label pd:
 
 scene bg middle2 ed with dissolve
-###
+play extra prelude_womp volume 0.7 fadein .5
 
 "\nHis hand was already on the doorknob when he noticed the sound."
 
@@ -1536,6 +1542,7 @@ with dissolve
 with vpunch
 pause 1.0
 stop music fadeout 1.5
+stop extra fadeout 1
 
 "\n\n1D: ALL EYES ON YOU"
 
@@ -2586,6 +2593,7 @@ label rv:
 nvl clear
 scene bg middle ed with dissolve
 play music ticking
+play extra rhapsody_womp volume 0.7 fadein .5
 
 """\nWe were friends, once upon a time.
 
@@ -2724,6 +2732,7 @@ This was why these things happened to him. No matter how badly he was hurt, he w
 \nHe would look up at me."""
 
 stop music
+stop extra fadeout 1
 
 "\n\n2V: OLD FRIEND"
 
@@ -2736,6 +2745,7 @@ nvl clear
 scene bg middle2 ed with dissolve
 play music ticking
 play sound street2
+play extra rhapsody_womp volume 0.7 fadein .5
 
 """\nThe low-flying sun seared her eyes.
 
@@ -2860,6 +2870,7 @@ nvl clear
 nvl hide
 show ed rex despair alt with dissolve 
 pause 1.0
+stop extra fadeout 1
 
 "the girl never made it to her destination."
 
