@@ -83,6 +83,10 @@ transform rexbar: #position of quickbar FOR REX (SPECIAL AND UNIQUE)
 
 screen quick_menu():
 
+    key 'mousedown_4':
+        action ShowMenu("history")
+    
+
     ## Ensure this appears on top of other screens.
     zorder 100
 

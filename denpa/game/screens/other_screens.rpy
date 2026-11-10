@@ -37,7 +37,7 @@ screen about():
         has vbox
         style_prefix "about"
 
-        label "[config.name!t]"
+        label "\n[config.name!t]"
         text _("Version [config.version!t]\n")
 
         if gui.about:
