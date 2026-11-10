@@ -14,13 +14,13 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("")
+define config.name = _("IRISIRISIRIS")
 
 ## A short name for the game used for executables and directories in the built
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = ""
+define build.name = "iris3"
 
 ## Save directory ##############################################################
 ##
