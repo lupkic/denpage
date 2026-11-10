@@ -10,7 +10,13 @@
 ## triple-quotes, and leave a blank line between paragraphs.
 
 define gui.about = _p("""
-EasyRenPyGui is made by {a=https://github.com/shawna-p}Feniks{/a} {a=https://feniksdev.com/}@feniksdev.com{/a}
+Created by {a="https://windup-soft.itch.io/"}WIND-UP SOFT{/a} with art by {a="https://lupkic.nekoweb.org/"}Nikola{/a} and words by {a="https://poppet.nekoweb.org/"}Linear{/a}.
+
+The game uses photos by {a="https://hardwaregore.neocities.org/"}Pilot{/a}, Nikola, and Linear,
+with additional photos by {a="https://www.flickr.com/photos/151817352@N04/53969545063/"}Laura Wolf{/a} and {a="https://www.flickr.com/photos/dalecruse/52408750299/"}Dale Cruse{/a},
+music from Project Gutenberg,
+and sound effects from Freesound, by {a="https://freesound.org/people/LG/sounds/54928/?}LG{/a} and {a="https://freesound.org/people/2hear/sounds/469313/"}2hear{/a} (among many others).
+EasyRenPyGui is made by {a=https://github.com/shawna-p}Feniks{/a} {a=https://feniksdev.com/}@feniksdev.com{/a}.
 """)
 
 

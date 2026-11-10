@@ -814,7 +814,7 @@ label pdespair1:
     play music prelude fadein 1
 
     y "lion"
-    "why do you like me"
+    "why do you like me?"
     
     show lion sweat
 
@@ -1071,7 +1071,7 @@ p "Ok i sent it"
 "Phew"
 "Now we wait"
 
-y "are you sure she’s gonna read it"
+y "are you sure she’s gonna read it?"
 
 show lion happy
 
@@ -2085,7 +2085,7 @@ r "you say something"
 
 nvl clear
 
-y "I'm sure she's having a day like any other"
+y "I'm sure she's having a day like any other."
 
 show rex mocking
 
@@ -2184,8 +2184,8 @@ label rviolence1:
 
     nvl clear
 
-    y "I can tell you have a great vision"
-    "We just have to refine it a little"
+    y "I can tell you have a great vision."
+    "We just have to refine it a little."
 
     r "hah"
     "flattery will get you nowhere"
@@ -2458,7 +2458,7 @@ label rviolence3:
     nvl clear
     $nvl_mode = "rex"
 
-    y "You're not exactly an open book yourself"
+    y "You're not exactly an open book yourself."
     
     show rex eyebrow twitch
 
@@ -2501,7 +2501,7 @@ r "the picture looks zoomed in"
 "they knew to keep their distance"
 "the text sounds kinda stalkerish too"
 
-y "Maybe they were following her"
+y "Maybe they were following her?"
 
 nvl clear
 
