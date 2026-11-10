@@ -11,7 +11,7 @@
 
 image main_menu_background = VBox(
     HBox(Solid("#000", xsize=325),"images/quickbar horizontal.png", ysize=150),
-    HBox(Solid("#000", xsize=100),"gui/main_menu.jpg"),
+    HBox(Solid("#000", xsize=100),"gui/main_menu.png"),
 )
 
 screen main_menu():
