@@ -16,7 +16,7 @@ screen history():
     ## Avoid predicting this screen, as it can be very large.
     predict False
 
-    add HBox("#000000") # The background; can be whatever
+    add HBox("gui/log.png") # The background; can be whatever
 
     use game_menu(_("Log"))
 
@@ -59,23 +59,26 @@ define gui.history_allow_tags = { "alt", "noalt", "rt", "rb", "art" }
 
 
 style history_frame:
-    xsize 600
+    xsize 800
     ysize None
     background None
 
 style history_hbox:
-    spacing 20
+    spacing 30
 
 style history_vbox:
-    spacing 20
+    spacing 5
 
 style history_name:
     xalign 1.0
 
 style history_name_text:
     textalign 1.0
-    align (1.0, 0.0)
+    align (0.5, 0.0)
     color '#f93c3e'
+    font "ipam.ttf"
+    size 24
+    bold True
 
 style history_text:
     textalign 0.0

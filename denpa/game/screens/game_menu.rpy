@@ -32,6 +32,8 @@ screen game_menu(title):
 
         textbutton _("OPTIONS") action ShowMenu("preferences")
 
+        textbutton _("LOG") action ShowMenu("history")
+
         if _in_replay:
 
             textbutton _("END REPLAY") action EndReplay(confirm=True)
