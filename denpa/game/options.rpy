@@ -149,8 +149,8 @@ define config.allow_underfull_grids = True
 
 ## Default volume % for the various volume sliders
 ## https://www.renpy.org/doc/html/preferences.html#audio-channel-defaults
-define config.default_music_volume = 0.5
-define config.default_sfx_volume = 0.5
+define config.default_music_volume = 1
+define config.default_sfx_volume = 1
 
 
 ## Optional; this reverts the behaviour of the volume sliders back to
@@ -199,6 +199,7 @@ init python:
     ## for README or instructions, you may want to remove these lines.
     build.classify('**.txt', None)
     build.classify('**.md', None)
+    build.classify('**.kra', None)
 
     ## To archive files, classify them as 'archive'.
 

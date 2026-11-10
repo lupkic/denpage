@@ -63,9 +63,10 @@ $nvl_mode = "pyg" #this does nothing bc pyg is default but its good to make him 
 
 play sound ticking3
 show lion neutral at lion_scr
+stop music fadeout .5
 
-play music loopish fadein 1 volume 0.7
 p "I didnt get a chance to tell you after class but"
+play music loopish fadein 1 volume 0.7
 
 show lion happy
 show bg blue2 with dis #TODO figure out nvl fade effect
@@ -1559,6 +1560,7 @@ label chat_rex:
 
 $nvl_mode = "rex"
 
+stop music fadeout .5
 play sound ticking3
 r "ok lets take it from the top"
 
@@ -1653,7 +1655,7 @@ nvl clear
 
 r "thats like showing your bare ass to a houseguest"
 
-#TODO put backin show rex mocking normie
+show rex mocking normie
 
 "of your parents"
 
@@ -2592,7 +2594,6 @@ return
 
 label rv:
 
-nvl clear
 scene bg middle ed with dissolve
 play music ticking
 play extra rhapsody_womp volume 0.7 fadein .5
@@ -2741,8 +2742,6 @@ stop extra fadeout 1
 return
 
 label rd:
-
-nvl clear
 
 scene bg middle2 ed with dissolve
 play music ticking
