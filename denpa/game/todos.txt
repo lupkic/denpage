@@ -8,7 +8,6 @@
 IMGS TODO
 - creepshot lineart + color
 - title img
-- rex on commute sprite neutral + thinking
 - rex sprites polish
 
 if were bored on the 11th:
