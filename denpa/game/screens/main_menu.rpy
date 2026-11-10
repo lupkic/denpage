@@ -20,9 +20,8 @@ image mainmenu:
     repeat
 
 image main_menu_background = VBox(
-    HBox(Solid("#000", xsize=325),"images/quickbar horizontal.png", ysize=150),
-    HBox(Solid("#000", xsize=100),"mainmenu"),
-)
+    HBox(Solid("#000", xsize=325),"images/quickbar horizontal.png", ysize=150),"mainmenu")
+
 
 screen main_menu():
 
