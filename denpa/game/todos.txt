@@ -5,9 +5,6 @@
 - change history screen
 - credits roll
 
-IMGS TODO
-- title color
-
 if were bored on the 11th:
 - 1v phone alt
 
