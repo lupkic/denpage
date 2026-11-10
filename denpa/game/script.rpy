@@ -131,6 +131,9 @@ show weininger onlayer overlay zorder 15
 play sound "barking.mp3"
 
 "Theres no soul in there"
+
+show weininger onlayer overlay zorder 15
+
 "It sounds crazy but its true. Its not just women either"
 "Theyre all just a bunch of cruel looks with legs"
 "No values except for whats “nromal”"
@@ -375,9 +378,11 @@ show lion sweat
 
 "Im not saying it because im jealous. You have to believe me"
 
-show lion neutral
 
 "Sometimes i cant make sense of my own thoughts"
+
+show lion neutral
+
 "But you say them with conviction"
 "Now im terrified"
 "Whatever it is that makes you you"
@@ -1392,9 +1397,9 @@ He fixed his eye on the peephole –
 
 play music ticking2
 
-"""\nHis heart fell in an instant.
+"\nHis heart fell in an instant."
 
-A thousand doubts pricked at his skin; he fought the urge to scratch at them, to pull at his hair. What was she doing here?
+"""A thousand doubts pricked at his skin; he fought the urge to scratch at them, to pull at his hair. What was she doing here?
 
 There were five to ten responses swirling in his head, depending on her next move. All assuming she would write him back, desperate to save her good image. Some were gracious. Some pushed his luck –
 
@@ -1558,7 +1563,7 @@ play sound ticking3
 r "ok lets take it from the top"
 
 play music street fadein 1
-show rex neutral at rex_scr
+show rex neutral commute at rex_scr
 show bg bluish var with dis
 
 "{i}“He ran his fingers down his lover’s sternum. The skin bobbed and knotted beneath his touch, pacing an unsteady rhythm. Scar tissue: some self-inflicted, some almost certainly coaxed out of others. Jiro always brought out the worst in people. Even now, as he lay there beneath him, his gaze was merely confused. Was he wrong for trying to treat him gently for once?”{/i}"
@@ -1568,7 +1573,7 @@ r "remember this is a tale of MADNESS and OBSESSION"
 "eachothers blood i mean"
 "among other things"
 
-show rex thinking
+show rex thinking commute
 
 r "i remain undecided about cum"
 "ambivalent even"
@@ -1581,7 +1586,7 @@ r "i remain undecided about cum"
 
 nvl clear
 
-show rex neutral
+show rex neutral commute
 
 r "you and me were gonna prove that real human connection is possible"
 "it might sound funny but its my last shot"
@@ -1590,7 +1595,7 @@ r "you and me were gonna prove that real human connection is possible"
 "none of that silly business mixing up their eye colors and whatnot"
 "although..."
 
-show rex thinking
+show rex thinking commute
 
 "would she?"
 "i guess i dont have very high expectations of a gacha player"
@@ -1604,7 +1609,7 @@ r "i was surprised when she said she was interested in this pairing at all"
 "its all interchangeable to those people"
 "whoever moves first gets the clout. thats all there is to it"
 
-show rex neutral
+show rex neutral commute
 
 "more future online detritus for the pile"
 "i just wish they wouldnt confuse taste with intelligence"
@@ -1613,16 +1618,16 @@ nvl clear
 
 r "but thats neither here nor there"
 "who knows maybe she is excellent"
+hide rex
 "wont know unless i try"
 
 stop music fadeout 1.5
-show rex neutral
 
 r "{i}“Something dark and vital red squirmed in his stomach. The man he loved, in all his frail beauty, was waiting with open arms. His limbs became paralyzed with certainty. If Haku laid a hand on him now, he would crumble. All with that same smile on his face...”{/i}"
 
 r "so"
 
-show rex thinking
+show rex thinking normie at rex_scr
 
 "youre basically a genius right"
 "why would a girl not wear the bracelet i got for her"
@@ -1633,12 +1638,12 @@ play music loopish fadein 1 volume 0.7
 "nothing outrageous but better than what she usually wears"
 "with those infantile plastic beads..."
 
-show rex neutral
+show rex neutral normie
 
 "couldnt catch me dead in something like that i have an image to consider but her"
 "its like shes totally given up"
 
-show rex judging
+show rex judging normie
 
 "i mean she talked to ME about fandom discourse"
 "can you fucking imagine. we are NOT that close"
@@ -1648,12 +1653,12 @@ nvl clear
 
 r "thats like showing your bare ass to a houseguest"
 
-show rex mocking
+#TODO put backin show rex mocking normie
 
 "of your parents"
 
 
-show rex neutral
+show rex neutral normie
 
 r "the whole thing made my skin crawl"
 "had to pretend i had no idea what she was talking about"
@@ -1672,26 +1677,26 @@ r "theres this guy in one of our classes"
 "total prey animal"
 "i get secondhand nausea just from looking at him"
 
-show rex judging
+show rex judging normie
 
 "wouldnt be a problem if he wasnt staring at us constantly"
 "at least i think he is? dude needs a haircut"
 "see if it was a guy like that i wouldnt wanna wear it either"
 
-show rex thinking
+show rex thinking normie
 
 "but its me"
 "you know?"
 
 nvl clear
 
-show rex neutral
+hide rex
 show bg tunnel var with dis
 
 y "{i}“How many times had they done this already? He saw no reason for Haku to hesitate. He cocked his head, making another gesture of invitation. Their earlier brush with death only made him more desperate; his body strained to lift itself to meet him.”{/i}"
 
 play sound "typing.mp3"
-show rex bored
+show rex bored at rex_scr
 
 r "can you take this seriously please"
 "of course he knows haku wants him to be safe"
@@ -2414,7 +2419,7 @@ show rex frustrated
 "incoherent"
 "{i}“I cant fault you for what is not in your nature which regarding your fellow men as more than props in your showroom life apparently is. Having said that, even badly trained dogs must occasionally pay for their mistakes”{/i}"
 
-show rex judging
+show rex worried
 
 "do i"
 
@@ -2439,7 +2444,7 @@ label rdespair3:
 
     r "i am literally just some girl in their class"
 
-    show rex worried
+    show rex uncollected
 
     "if thats enough to make someone hate me this much"
     "im not sure what i can do"
@@ -2544,7 +2549,7 @@ show rex thinking
 
 "or like i dont know his goddamn address"
 
-y "Youre not planning on going over there, are you?"
+y "You're not planning on going over there, are you?"
 
 r "why not"
 "i just wanna talk"
