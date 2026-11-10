@@ -8,10 +8,20 @@
 ## Replace this with your background image, if you like
 
 
+image mainmenu:
+    "gui/main_menu.png"
+    1.0
+    "gui/main_menu2.png"
+    0.5
+    "gui/main_menu3.png"
+    1.0
+    "gui/main_menu2.png"
+    0.5
+    repeat
 
 image main_menu_background = VBox(
     HBox(Solid("#000", xsize=325),"images/quickbar horizontal.png", ysize=150),
-    HBox(Solid("#000", xsize=100),"gui/main_menu.png"),
+    HBox(Solid("#000", xsize=100),"mainmenu"),
 )
 
 screen main_menu():
