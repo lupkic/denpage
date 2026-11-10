@@ -3,7 +3,6 @@
 define y = Character("IRIS", kind=nvl, bold = True, color = "#C2BBC9")
 define p = Character("LION", kind=nvl, image="lion", bold = True, color = "#ACDAE3")
 define r = Character("REX", kind=nvl, image="rex", bold = True, color = "#E3ACAE")
-define d = Character(kind=nvl, what_prefix='"', what_suffix='"') #dialog for endings?
 define narrator = nvl_narrator
 # define config.nvl_paged_rollback = True
 define dis = { "master" : Dissolve(3.0) }
@@ -223,6 +222,7 @@ p "I know youre just lonely. I wish i could do more about it"
 "Or are you not even there?"
 
 show lion low
+play sound phone
 
 p "Wait im getting a call"
 "Unknown number. This is seriously starting to piss me off"
@@ -1190,8 +1190,6 @@ show lion happy
 "So i should see if she replies anyway"
 
 stop music fadeout 1
-
-"violence = [violence]\n despair = [despair]"
 
 nvl clear
 
@@ -2329,7 +2327,7 @@ show rex judging
 
 "run a search will you"
 
-y "..."
+y "{image=dotdot.png}"
 "No hits found."
 
 r "cant say i trust you much"
@@ -2568,7 +2566,6 @@ show rex thinking
 
 "get something else"
 
-"violence = [violence]\n despair = [despair]"
 stop music fadeout 1
 
 $ nvl_mode = "ed"
@@ -2711,7 +2708,7 @@ play sound fall
 
 """\n\"Eek!\"
 
-\nWithout me to hold on to, Pygmalion stumbled and fell backwards onto his ass.
+\nPygmalion was much lighter than I expected him to be. Without me to hold on to, he stumbled and fell backwards onto his ass.
 
 See, I knew he was all talk.
 
