@@ -2,17 +2,12 @@
 - main menu music (options.rpy)
 - transition when you press play on main menu
 - change rollback
-- make
 - change history screen
 - credits roll
-- another sound channel on renpy for ed
 
 IMGS TODO
 - creepshot lineart + color
-- selfie lineart + color
-- rex despair more cry more
 - title img
-- pyg head tilt sprite
 - rex on commute sprite neutral + thinking
 - rex sprites polish
 
