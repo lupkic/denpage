@@ -1,8 +1,5 @@
 - ctc
-- main menu music (options.rpy)
 - transition when you press play on main menu
-- change rollback
-- change history screen
 - credits roll
 
 if were bored on the 11th:

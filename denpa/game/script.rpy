@@ -1,4 +1,4 @@
-﻿# characters TODO add color
+﻿define config.rollback_enabled = False
 
 define y = Character("IRIS", kind=nvl, bold = True, color = "#C2BBC9")
 define p = Character("LION", kind=nvl, image="lion", bold = True, color = "#ACDAE3")
